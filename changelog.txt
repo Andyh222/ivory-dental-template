@@ -1,0 +1,25 @@
+IVORY DENTAL — HTML TEMPLATE
+CHANGELOG
+============================================================
+
+Version 1.0.0 — Initial release
+----------------------------
+- Full responsive HTML5 template
+- Two colour themes (blue/white and forest green/coral/gold)
+- Bootstrap 5.3.3 grid and components
+- Fullscreen hero section with video background
+- Scrollytelling horizontal services section
+- About / intro section with stat cards
+- Specialist care section (Elderly, Children's, Cosmetic)
+- Dental pricing plans (3 tiers)
+- Patient testimonials section
+- Live open/closed status widget with London timezone support
+- Emergency phone banner (auto-shows when practice is closed)
+- Google Maps embed with location details
+- Full-width CTA banner
+- Responsive footer with 5 columns
+- Smooth scroll reveal animations
+- Reduced motion support
+- Mobile-first responsive design (tested to 320px)
+- Bootstrap Icons 1.13.1
+- Google Fonts: Inter

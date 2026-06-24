@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ivory Dental Template — Documentation</title>
+  <style>
+    :root { --blue: #007AFF; --ink: #1A1A1A; --muted: #6E6E73; --border: #E5E5EA; --offwhite: #F5F5F7; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--ink); background: #fff; line-height: 1.7; }
+    a { color: var(--blue); }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 60px 24px; }
+    h1 { font-size: 2.4rem; font-weight: 800; letter-spacing: -.03em; margin-bottom: 8px; }
+    h2 { font-size: 1.4rem; font-weight: 700; margin: 48px 0 12px; padding-top: 48px; border-top: 1px solid var(--border); }
+    h3 { font-size: 1rem; font-weight: 700; margin: 24px 0 8px; color: var(--blue); }
+    p  { color: var(--muted); margin-bottom: 16px; }
+    ul { color: var(--muted); padding-left: 20px; margin-bottom: 16px; }
+    li { margin-bottom: 6px; }
+    code { background: var(--offwhite); border-radius: 5px; padding: 2px 7px; font-size: .875rem; font-family: 'SF Mono', 'Fira Code', monospace; color: var(--ink); }
+    pre  { background: var(--offwhite); border-radius: 10px; padding: 20px; overflow-x: auto; margin-bottom: 20px; }
+    pre code { background: none; padding: 0; font-size: .82rem; line-height: 1.6; }
+    .badge { display: inline-block; background: var(--blue); color: #fff; font-size: .72rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; letter-spacing: .05em; margin-left: 8px; vertical-align: middle; }
+    .file-tree { background: var(--offwhite); border-radius: 10px; padding: 20px 24px; font-family: 'SF Mono', 'Fira Code', monospace; font-size: .85rem; line-height: 1.9; margin-bottom: 20px; }
+    .note { background: #EFF6FF; border-left: 3px solid var(--blue); border-radius: 0 8px 8px 0; padding: 14px 18px; margin-bottom: 20px; font-size: .9rem; color: #1a4a8a; }
+    .version { color: var(--muted); font-size: .9rem; margin-bottom: 40px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: .9rem; }
+    th { text-align: left; padding: 10px 14px; background: var(--offwhite); font-weight: 700; border-bottom: 2px solid var(--border); }
+    td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--muted); }
+    td code { font-size: .8rem; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>🦷 Ivory Dental</h1>
+  <p class="version">HTML Template · Version 1.0.0 · Documentation</p>
+
+  <p>Thank you for purchasing Ivory Dental. This document covers everything you need to set up, customise, and deploy the template. Please read through before getting started.</p>
+
+  <!-- ─── FILE STRUCTURE ─── -->
+  <h2>File Structure</h2>
+  <div class="file-tree">
+dental-site.html<br>
+assets/<br>
+&nbsp;&nbsp;css/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;style.css&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;← All custom styles (blue theme)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;style-colour.css&nbsp;&nbsp;&nbsp;← Alternative colour theme<br>
+&nbsp;&nbsp;js/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;main.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;← Scrollytelling, live status, animations<br>
+&nbsp;&nbsp;img/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;← Add your images here<br>
+docs/<br>
+&nbsp;&nbsp;documentation.html&nbsp;← This file<br>
+humans.txt<br>
+changelog.txt
+  </div>
+
+  <div class="note">The template includes two colour themes. <code>style.css</code> is the clean blue/white version. <code>style-colour.css</code> is the warm forest green, coral and gold version. To switch themes, change the <code>&lt;link&gt;</code> tag in <code>&lt;head&gt;</code>.</div>
+
+  <!-- ─── GETTING STARTED ─── -->
+  <h2>Getting Started</h2>
+  <p>Open <code>dental-site.html</code> in a browser to preview the template. For the best experience during development, serve the files via a local server rather than opening directly as a <code>file://</code> URL:</p>
+
+  <h3>VS Code — Live Server (recommended)</h3>
+  <p>Install the <strong>Live Server</strong> extension, right-click <code>dental-site.html</code> and choose <em>Open with Live Server</em>.</p>
+
+  <h3>Python (if installed)</h3>
+  <pre><code>cd your-project-folder
+python3 -m http.server 8000
+# Then open http://localhost:8000/dental-site.html</code></pre>
+
+  <!-- ─── IMAGES ─── -->
+  <h2>Replacing Images</h2>
+  <p>Place your images in <code>assets/img/</code> and update the <code>src</code> attributes in the HTML. Recommended filenames and dimensions:</p>
+  <table>
+    <tr><th>Filename</th><th>Used in</th><th>Recommended size</th></tr>
+    <tr><td><code>dental1.jpg</code></td><td>Service cards, Elderly Care panel</td><td>1200 × 900px</td></tr>
+    <tr><td><code>dental2.jpg</code></td><td>Service cards, Elderly Care secondary</td><td>800 × 800px</td></tr>
+    <tr><td><code>dental3.jpg</code></td><td>Service cards, Children's panel</td><td>800 × 1100px</td></tr>
+    <tr><td><code>dental4.jpg</code></td><td>Service cards, Cosmetic panel left</td><td>700 × 1050px</td></tr>
+    <tr><td><code>dental5.jpg</code></td><td>Service cards, Cosmetic panel right</td><td>700 × 1050px</td></tr>
+    <tr><td><code>dental6.jpg</code></td><td>Emergency Care service card</td><td>1200 × 900px</td></tr>
+    <tr><td><code>dental7.jpg</code></td><td>Children's Dentistry service card</td><td>1200 × 900px</td></tr>
+  </table>
+  <p>For the <strong>hero section</strong>, replace the <code>&lt;video&gt;</code> source with your own video file, and update the <code>poster</code> attribute with a still fallback image:</p>
+  <pre><code>&lt;video autoplay muted loop playsinline poster="assets/img/your-poster.jpg"&gt;
+  &lt;source src="assets/img/your-video.mp4" type="video/mp4" /&gt;
+&lt;/video&gt;</code></pre>
+  <p>The <strong>intro section</strong> photo is referenced at line ~123 of the HTML. The <strong>specialist care panels</strong> reference images inline within the <code>&lt;!-- SPECIALIST CARE --&gt;</code> section.</p>
+
+  <!-- ─── COLOURS ─── -->
+  <h2>Customising Colours</h2>
+  <p>All colours are CSS custom properties at the top of <code>style.css</code>. Change these tokens and the entire site updates automatically:</p>
+  <pre><code>:root {
+  --c-blue:    #007AFF;   /* Primary accent — buttons, links, eyebrows */
+  --c-blue-dk: #005EC4;   /* Hover state for primary accent */
+  --c-ink:     #1A1A1A;   /* Dark text and dark section backgrounds */
+  --c-offwhite:#F5F5F7;   /* Light section backgrounds */
+  --c-mint:    #E8F5F0;   /* Very light tint used on image wrappers */
+  --c-muted:   #6E6E73;   /* Body/secondary text */
+  --c-border:  #D2D2D7;   /* Dividers and card borders */
+}</code></pre>
+  <div class="note">To use the alternative colour theme, change the stylesheet link in <code>&lt;head&gt;</code> from <code>style.css</code> to <code>style-colour.css</code>. The colour theme uses a forest green, coral and gold palette.</div>
+
+  <!-- ─── OPENING HOURS ─── -->
+  <h2>Updating Opening Hours</h2>
+  <p>The live open/closed status widget reads from an <code>hours</code> object in <code>assets/js/main.js</code>. Find this block near the bottom of the file and edit the values (24-hour format). Set a day to <code>null</code> for closed:</p>
+  <pre><code>const hours = {
+  1: { open: 8,  close: 19 }, // Monday    8am–7pm
+  2: { open: 8,  close: 19 }, // Tuesday
+  3: { open: 8,  close: 19 }, // Wednesday
+  4: { open: 8,  close: 19 }, // Thursday
+  5: { open: 8,  close: 19 }, // Friday
+  6: { open: 9,  close: 16 }, // Saturday  9am–4pm
+  0: null,                     // Sunday — closed
+};</code></pre>
+  <p>The status uses London time (<code>Europe/London</code>) automatically, so it works correctly for users in any timezone.</p>
+
+  <!-- ─── MAP ─── -->
+  <h2>Updating the Map</h2>
+  <p>Find the <code>&lt;iframe&gt;</code> in the Location section and replace the <code>src</code> with an embed URL for your own address:</p>
+  <ol style="color:var(--muted);padding-left:20px;margin-bottom:16px;">
+    <li>Go to <a href="https://maps.google.com" target="_blank">maps.google.com</a> and search for your address</li>
+    <li>Click <strong>Share</strong> → <strong>Embed a map</strong></li>
+    <li>Copy the <code>src</code> URL from the iframe code provided</li>
+    <li>Paste it into the template's iframe <code>src</code> attribute</li>
+  </ol>
+
+  <!-- ─── CONTACT DETAILS ─── -->
+  <h2>Updating Contact Details</h2>
+  <p>Search the HTML for the placeholder details and replace with your own:</p>
+  <table>
+    <tr><th>Placeholder</th><th>Replace with</th></tr>
+    <tr><td><code>42 Harley Street, Marylebone</code></td><td>Your practice address</td></tr>
+    <tr><td><code>London, W1G 9PR</code></td><td>Your postcode</td></tr>
+    <tr><td><code>020 7123 4567</code></td><td>Your main phone number</td></tr>
+    <tr><td><code>020 7123 4999</code></td><td>Your emergency phone number</td></tr>
+    <tr><td><code>hello@ivorydental.co.uk</code></td><td>Your email address</td></tr>
+    <tr><td><code>Ivory Dental</code></td><td>Your practice name</td></tr>
+  </table>
+
+  <!-- ─── PRICING ─── -->
+  <h2>Updating Pricing Plans</h2>
+  <p>The three pricing cards are in the <code>&lt;!-- PLANS --&gt;</code> section of the HTML. Each card has a <code>.plan-price</code> element — update the number and the small <code>&lt;span&gt;</code> for the pence/cents. Update the <code>.plan-period</code> text and the <code>.plan-features</code> list items as needed.</p>
+
+  <!-- ─── CDNS ─── -->
+  <h2>Third-Party Libraries</h2>
+  <p>The template loads the following from CDN — no installation required:</p>
+  <table>
+    <tr><th>Library</th><th>Version</th><th>Used for</th></tr>
+    <tr><td>Bootstrap</td><td>5.3.3</td><td>Responsive grid, mobile nav collapse</td></tr>
+    <tr><td>Bootstrap Icons</td><td>1.13.1</td><td>All icons throughout the template</td></tr>
+    <tr><td>Google Fonts — Inter</td><td>Latest</td><td>All typography</td></tr>
+  </table>
+  <p>All CDN links are in the <code>&lt;head&gt;</code> of <code>dental-site.html</code>. If you prefer to host these locally, download each library and update the paths accordingly.</p>
+
+  <!-- ─── SUPPORT ─── -->
+  <h2>Support</h2>
+  <p>If you have questions about the template, please use the comments section on the ThemeForest item page. We aim to respond within 24–48 hours on business days.</p>
+  <p>Before contacting support, please check this documentation and make sure your files are being served via a local server rather than opened directly from the filesystem.</p>
+
+</div>
+</body>
+</html>

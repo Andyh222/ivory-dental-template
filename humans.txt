@@ -1,0 +1,15 @@
+/* TEAM */
+Template Author: Ivory Dental Template
+Contact: via ThemeForest item comments
+
+/* THANKS */
+Bootstrap 5.3.3 — https://getbootstrap.com
+Bootstrap Icons 1.13.1 — https://icons.getbootstrap.com
+Google Fonts (Inter) — https://fonts.google.com/specimen/Inter
+Google Maps Embed API — https://developers.google.com/maps
+Placehold.co (placeholder images) — https://placehold.co
+
+/* SITE */
+Language: English
+Doctype: HTML5
+IDE: —

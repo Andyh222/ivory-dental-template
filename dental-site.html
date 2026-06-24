@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ivory Dental — Premium Dentistry in London</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Site styles -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+
+  <!-- All styles are in assets/css/style.css -->
+</head>
+<body>
+
+  <!-- ══ NAV ══════════════════════════════════════════════ -->
+  <nav id="mainNav">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between">
+        <a href="#hero" class="nav-logo">🦷 Ivory Dental</a>
+        <!-- Desktop links -->
+        <div class="d-none d-lg-flex align-items-center gap-1">
+          <a href="#services" class="nav-link-item">Services</a>
+          <a href="#specialist-care" class="nav-link-item">Specialist Care</a>
+          <a href="#plans" class="nav-link-item">Plans</a>
+          <a href="#testimonials" class="nav-link-item">Reviews</a>
+          <a href="#location" class="nav-link-item">Find Us</a>
+          <a href="#plans" class="nav-cta ms-2">Book Now</a>
+        </div>
+        <!-- Mobile toggler -->
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+          <div class="navbar-toggler-icon-custom">
+            <span></span><span></span><span></span>
+          </div>
+        </button>
+      </div>
+      <!-- Mobile menu -->
+      <div class="collapse" id="mobileMenu">
+        <div class="d-flex flex-column gap-1 py-3">
+          <a href="#services" class="nav-link-item" data-bs-toggle="collapse" data-bs-target="#mobileMenu">Services</a>
+          <a href="#specialist-care" class="nav-link-item" data-bs-toggle="collapse" data-bs-target="#mobileMenu">Specialist Care</a>
+          <a href="#plans" class="nav-link-item" data-bs-toggle="collapse" data-bs-target="#mobileMenu">Plans</a>
+          <a href="#testimonials" class="nav-link-item" data-bs-toggle="collapse" data-bs-target="#mobileMenu">Reviews</a>
+          <a href="#location" class="nav-link-item" data-bs-toggle="collapse" data-bs-target="#mobileMenu">Find Us</a>
+          <a href="#plans" class="nav-cta mt-2 text-center" data-bs-toggle="collapse" data-bs-target="#mobileMenu">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ═════════════════════════════════════════════ -->
+  <section id="hero">
+    <!-- Pexels free-to-use dental/smile video (served via CDN; fallback image shown if blocked) -->
+    <video id="heroVideo" autoplay muted loop playsinline poster="https://images.pexels.com/photos/3779705/pexels-photo-3779705.jpeg?auto=compress&cs=tinysrgb&w=1600">
+      <source src="assets/img/dentalmov2.mov" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        Now accepting new patients
+      </div>
+      <h1 class="hero-title">
+        Your <em>perfect smile</em><br/>starts here
+      </h1>
+      <p class="hero-subtitle">
+        Award-winning dentistry in the heart of London. Compassionate care, cutting-edge technology, and results you'll want to show off.
+      </p>
+      <div class="hero-actions">
+        <a href="#plans" class="btn-hero-primary">Book a Consultation</a>
+        <a href="#services" class="btn-hero-ghost">Our Services</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span class="text-uppercase" style="letter-spacing:.1em; font-size:.68rem">Scroll</span>
+      <i class="bi bi-chevron-down scroll-arrow"></i>
+    </div>
+  </section>
+
+  <!-- ══ INTRO ═════════════════════════════════════════════ -->
+  <section id="intro">
+    <div class="container">
+      <div class="intro-grid">
+        <div>
+          <span class="section-eyebrow reveal">About Us</span>
+          <h2 class="section-title reveal reveal-delay-1">Dentistry done<br/>differently.</h2>
+          <p class="section-lead reveal reveal-delay-2">
+            At Ivory Dental, we believe a healthy smile is more than just straight teeth — it's a gateway to confidence and wellbeing. Our team of specialists brings warmth, expertise, and the latest in dental technology to every appointment.
+          </p>
+          <p class="section-lead reveal reveal-delay-3" style="margin-top: 16px;">
+            Whether you're coming in for a routine check-up or a full smile makeover, you'll always leave feeling looked after.
+          </p>
+
+          <div class="intro-stat-grid">
+            <div class="stat-card reveal reveal-delay-1">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Years in practice</div>
+            </div>
+            <div class="stat-card reveal reveal-delay-2">
+              <div class="stat-number">98%</div>
+              <div class="stat-label">Patient satisfaction</div>
+            </div>
+            <div class="stat-card reveal reveal-delay-3">
+              <div class="stat-number">8,400</div>
+              <div class="stat-label">Happy patients</div>
+            </div>
+            <div class="stat-card reveal reveal-delay-4">
+              <div class="stat-number">3</div>
+              <div class="stat-label">Specialist dentists</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2">
+          <div class="intro-image-wrap">
+            <img src="https://images.pexels.com/photos/3779705/pexels-photo-3779705.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Dentist with patient" loading="lazy" />
+            <div class="intro-badge">
+              <span class="badge-icon">🏆</span>
+              <div class="badge-text">
+                Best Dental Practice
+                <span>London Health Awards 2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SCROLLY SERVICES ══════════════════════════════════ -->
+  <section id="services">
+    <div class="services-sticky-wrap">
+      <div class="services-scroll-driver">
+        <div class="services-sticky">
+          <div class="services-header">
+            <span class="section-eyebrow">What We Do</span>
+            <h2 class="section-title">Care for every<br/>part of your smile.</h2>
+          </div>
+          <div class="services-track-wrap">
+            <div class="services-track" id="servicesTrack">
+
+              <div class="service-card">
+                <div class="service-icon" style="background:#E8F5FF; color:#007AFF;"><i class="bi bi-shield-plus"></i></div>
+                <h3>General Dentistry</h3>
+                <p>Routine check-ups, fillings, and preventive care to keep your teeth healthy for life. We recommend twice-yearly visits for optimal results.</p>
+                <a href="#plans" class="service-link">Learn more <i class="bi bi-arrow-right"></i></a>
+              </div>
+
+              <div class="service-card">
+                <div class="service-icon" style="background:#FFF3E8; color:#FF9500;"><i class="bi bi-stars"></i></div>
+                <h3>Teeth Whitening</h3>
+                <p>Professional whitening treatments that deliver up to 8 shades lighter — safely and comfortably, in-clinic or with our take-home kits.</p>
+                <a href="#plans" class="service-link">Learn more <i class="bi bi-arrow-right"></i></a>
+              </div>
+
+              <div class="service-card">
+                <div class="service-icon" style="background:#F0F9FF; color:#32ADE6;"><i class="bi bi-emoji-smile"></i></div>
+                <h3>Orthodontics</h3>
+                <p>Clear aligners and traditional braces for adults and children. Discreet, effective, and tailored to your lifestyle.</p>
+                <a href="#plans" class="service-link">Learn more <i class="bi bi-arrow-right"></i></a>
+              </div>
+
+              <div class="service-card">
+                <div class="service-icon" style="background:#E8FFF0; color:#34C759;"><i class="bi bi-circle-square"></i></div>
+                <h3>Dental Implants</h3>
+                <p>Permanent, natural-looking implants to replace missing teeth. Our implant specialists have over a decade of experience in restorative dentistry.</p>
+                <a href="#plans" class="service-link">Learn more <i class="bi bi-arrow-right"></i></a>
+              </div>
+
+              <div class="service-card">
+                <div class="service-icon" style="background:#FFF0F5; color:#FF2D55;"><i class="bi bi-heart-pulse-fill"></i></div>
+                <h3>Cosmetic Dentistry</h3>
+                <p>Veneers, bonding, and smile design — our cosmetic team works with you to craft the smile you've always imagined.</p>
+                <a href="#plans" class="service-link">Learn more <i class="bi bi-arrow-right"></i></a>
+              </div>
+
+              <div class="service-card">
+                <div class="service-icon" style="background:#F5F0FF; color:#AF52DE;"><i class="bi bi-activity"></i></div>
+                <h3>Emergency Care</h3>
+                <p>Same-day emergency appointments available. From severe toothache to cracked teeth, our team is ready when you need us most.</p>
+                <a href="#plans" class="service-link">Learn more <i class="bi bi-arrow-right"></i></a>
+              </div>
+
+              <div class="service-card">
+                <div class="service-icon" style="background:#FFFBE8; color:#FFCC00;"><i class="bi bi-people-fill"></i></div>
+                <h3>Children's Dentistry</h3>
+                <p>Gentle, anxiety-free care for little ones. We make dental visits fun and build healthy habits that last a lifetime.</p>
+                <a href="#plans" class="service-link">Learn more <i class="bi bi-arrow-right"></i></a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SPECIALIST CARE ══════════════════════════════════ -->
+  <section id="specialist-care">
+    <div class="container">
+      <div class="text-center sc-header">
+        <span class="section-eyebrow reveal">Specialist Care</span>
+        <h2 class="section-title reveal reveal-delay-1">Tailored to every<br/>stage of life.</h2>
+        <p class="section-lead reveal reveal-delay-2" style="margin: 0 auto 72px;">
+          Whatever your age or circumstance, we have a dedicated team and a personalised approach to match.
+        </p>
+      </div>
+
+      <!-- ── PANEL 1: Elderly & Frail Care ── -->
+      <div class="sc-panel sc-panel--warm reveal">
+        <div class="sc-panel-inner">
+          <div class="sc-images">
+            <div class="sc-img sc-img--main">
+              <img src="assets/img/dental1.jpg" alt="Caring for elderly patients" loading="lazy" />
+            </div>
+            <div class="sc-img sc-img--secondary">
+              <img src="assets/img/dental2.jpg" alt="Gentle dental care for frail patients" loading="lazy" />
+              <div class="sc-img-badge">
+                <i class="bi bi-heart-fill"></i>
+                <span>Compassionate Care</span>
+              </div>
+            </div>
+          </div>
+          <div class="sc-content">
+            <div class="sc-tag">Elderly &amp; Frail Care</div>
+            <h3 class="sc-title">Dentistry that<br/>treats you gently.</h3>
+            <p class="sc-lead">We understand that dental visits can feel daunting, particularly for older or more vulnerable patients. Our team takes time, moves at your pace, and ensures every appointment is as comfortable and dignified as possible.</p>
+            <div class="sc-cards">
+              <div class="sc-card">
+                <div class="sc-card-icon"><i class="bi bi-house-heart-fill"></i></div>
+                <div>
+                  <div class="sc-card-title">Home Visits</div>
+                  <div class="sc-card-text">We can visit patients who find travelling to the practice difficult.</div>
+                </div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-icon"><i class="bi bi-person-arms-up"></i></div>
+                <div>
+                  <div class="sc-card-title">Carer Coordination</div>
+                  <div class="sc-card-text">We work closely with carers and family members to plan the best care.</div>
+                </div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-icon"><i class="bi bi-capsule"></i></div>
+                <div>
+                  <div class="sc-card-title">Medication Aware</div>
+                  <div class="sc-card-text">Treatment is adapted around complex medication regimes and health conditions.</div>
+                </div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-icon"><i class="bi bi-person-wheelchair"></i></div>
+                <div>
+                  <div class="sc-card-title">Full Accessibility</div>
+                  <div class="sc-card-text">Step-free access, wide treatment rooms, and hearing loop available.</div>
+                </div>
+              </div>
+            </div>
+            <a href="#plans" class="sc-cta">Book a consultation <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PANEL 2: Children's Dental Health ── -->
+      <div class="sc-panel sc-panel--mint reveal">
+        <div class="sc-panel-inner sc-panel-inner--flip">
+          <div class="sc-content">
+            <div class="sc-tag">Children's Dental Health</div>
+            <h3 class="sc-title">Making dentistry<br/>fun for little ones.</h3>
+            <p class="sc-lead">Happy first visits set the tone for a lifetime of good dental health. Our children's team creates a friendly, warm environment where kids feel safe, curious, and even excited about their teeth.</p>
+            <div class="sc-cards">
+              <div class="sc-card">
+                <div class="sc-card-icon"><i class="bi bi-emoji-laughing-fill"></i></div>
+                <div>
+                  <div class="sc-card-title">Anxiety-Free Appointments</div>
+                  <div class="sc-card-text">Gentle techniques and a calm environment designed for nervous children.</div>
+                </div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-icon"><i class="bi bi-brush"></i></div>
+                <div>
+                  <div class="sc-card-title">Fissure Sealants</div>
+                  <div class="sc-card-text">Protective coatings that shield young teeth from decay before it starts.</div>
+                </div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-icon"><i class="bi bi-palette-fill"></i></div>
+                <div>
+                  <div class="sc-card-title">Orthodontic Assessment</div>
+                  <div class="sc-card-text">Early checks to spot alignment issues and plan ahead if needed.</div>
+                </div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-icon"><i class="bi bi-journal-check"></i></div>
+                <div>
+                  <div class="sc-card-title">Brushing Education</div>
+                  <div class="sc-card-text">We teach children (and parents!) the habits that keep teeth healthy for life.</div>
+                </div>
+              </div>
+            </div>
+            <a href="#plans" class="sc-cta">Explore Family Plans <i class="bi bi-arrow-right"></i></a>
+          </div>
+          <div class="sc-images sc-images--single">
+            <div class="sc-img sc-img--tall">
+              <img src="assets/img/dental3.jpg" alt="Children's dental health" loading="lazy" />
+              <div class="sc-img-badge sc-img-badge--bottom-right">
+                <i class="bi bi-emoji-smile-fill"></i>
+                <span>Kids love us!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PANEL 3: Cosmetic Treatments ── -->
+      <div class="sc-panel sc-panel--vivid reveal">
+        <div class="sc-panel-inner">
+          <div class="sc-images sc-images--duo">
+            <div class="sc-img sc-img--cosm1">
+              <img src="assets/img/dental4.jpg" alt="Cosmetic dental treatment" loading="lazy" />
+            </div>
+            <div class="sc-img sc-img--cosm2">
+              <img src="assets/img/dental5.jpg" alt="Smile transformation" loading="lazy" />
+              <div class="sc-img-badge sc-img-badge--vivid">
+                <i class="bi bi-stars"></i>
+                <span>Smile Design</span>
+              </div>
+            </div>
+          </div>
+          <div class="sc-content">
+            <div class="sc-tag">Cosmetic Treatments</div>
+            <h3 class="sc-title">The smile you've<br/>always imagined.</h3>
+            <p class="sc-lead">From subtle improvements to complete transformations — our cosmetic specialists combine artistry with the latest techniques to craft results that look completely natural and uniquely you.</p>
+            <div class="sc-cards">
+              <div class="sc-card">
+                <div class="sc-card-icon"><i class="bi bi-brightness-high-fill"></i></div>
+                <div>
+                  <div class="sc-card-title">Porcelain Veneers</div>
+                  <div class="sc-card-text">Ultra-thin, custom-crafted veneers for a flawless, natural-looking finish.</div>
+                </div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-icon"><i class="bi bi-stars"></i></div>
+                <div>
+                  <div class="sc-card-title">Teeth Whitening</div>
+                  <div class="sc-card-text">Professional whitening up to 8 shades lighter — in-clinic or take-home.</div>
+                </div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-icon"><i class="bi bi-magic"></i></div>
+                <div>
+                  <div class="sc-card-title">Composite Bonding</div>
+                  <div class="sc-card-text">Reshape, repair, and rejuvenate teeth in a single visit.</div>
+                </div>
+              </div>
+              <div class="sc-card">
+                <div class="sc-card-icon"><i class="bi bi-camera-fill"></i></div>
+                <div>
+                  <div class="sc-card-title">Digital Smile Design</div>
+                  <div class="sc-card-text">See your new smile before any treatment begins with our 3D preview technology.</div>
+                </div>
+              </div>
+            </div>
+            <a href="#plans" class="sc-cta">Book a smile consultation <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ PLANS ══════════════════════════════════════════════ -->
+  <section id="plans">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-eyebrow reveal">Dental Plans</span>
+        <h2 class="section-title reveal reveal-delay-1">Simple, transparent pricing.</h2>
+        <p class="section-lead reveal reveal-delay-2" style="margin: 0 auto;">
+          All plans include free check-ups and x-rays. No hidden fees, no surprise bills — just healthy smiles.
+        </p>
+      </div>
+
+      <div class="plans-grid">
+        <!-- Essential -->
+        <div class="plan-card reveal">
+          <div class="plan-name">Essential</div>
+          <div class="plan-price">£9<span style="font-size:1.4rem;font-weight:500">.99</span></div>
+          <div class="plan-period">per month, per adult</div>
+          <hr class="plan-divider" />
+          <ul class="plan-features">
+            <li><i class="bi bi-check-circle-fill"></i> 2 check-ups per year</li>
+            <li><i class="bi bi-check-circle-fill"></i> Annual scale & polish</li>
+            <li><i class="bi bi-check-circle-fill"></i> X-rays included</li>
+            <li><i class="bi bi-check-circle-fill"></i> Emergency appointments</li>
+            <li class="off"><i class="bi bi-x-circle-fill"></i> Whitening discount</li>
+            <li class="off"><i class="bi bi-x-circle-fill"></i> Orthodontic discount</li>
+          </ul>
+          <a href="#" class="btn-plan btn-plan-outline">Get Started</a>
+        </div>
+
+        <!-- Premium (featured) -->
+        <div class="plan-card featured reveal reveal-delay-1">
+          <div class="plan-badge-wrap"><span class="plan-badge">Most Popular</span></div>
+          <div class="plan-name">Premium</div>
+          <div class="plan-price">£19<span style="font-size:1.4rem;font-weight:500">.99</span></div>
+          <div class="plan-period">per month, per adult</div>
+          <hr class="plan-divider" />
+          <ul class="plan-features">
+            <li><i class="bi bi-check-circle-fill"></i> 2 check-ups per year</li>
+            <li><i class="bi bi-check-circle-fill"></i> 2× scale & polish</li>
+            <li><i class="bi bi-check-circle-fill"></i> X-rays included</li>
+            <li><i class="bi bi-check-circle-fill"></i> Emergency appointments</li>
+            <li><i class="bi bi-check-circle-fill"></i> 20% whitening discount</li>
+            <li><i class="bi bi-check-circle-fill"></i> 10% orthodontic discount</li>
+          </ul>
+          <a href="#" class="btn-plan btn-plan-primary">Get Started</a>
+        </div>
+
+        <!-- Family -->
+        <div class="plan-card reveal reveal-delay-2">
+          <div class="plan-name">Family</div>
+          <div class="plan-price">£44<span style="font-size:1.4rem;font-weight:500">.99</span></div>
+          <div class="plan-period">per month, up to 4 members</div>
+          <hr class="plan-divider" />
+          <ul class="plan-features">
+            <li><i class="bi bi-check-circle-fill"></i> Everything in Premium</li>
+            <li><i class="bi bi-check-circle-fill"></i> Covers 2 adults + 2 children</li>
+            <li><i class="bi bi-check-circle-fill"></i> Kids' treatments included</li>
+            <li><i class="bi bi-check-circle-fill"></i> Priority bookings</li>
+            <li><i class="bi bi-check-circle-fill"></i> 25% whitening discount</li>
+            <li><i class="bi bi-check-circle-fill"></i> 15% orthodontic discount</li>
+          </ul>
+          <a href="#" class="btn-plan btn-plan-outline">Get Started</a>
+        </div>
+      </div>
+
+      <p class="text-center mt-4 reveal" style="font-size:.85rem; color:var(--c-muted);">
+        All plans are month-to-month with no lock-in contract. Cancel any time. <a href="#" style="color:var(--c-blue);">See full plan details →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ══ TESTIMONIALS ═══════════════════════════════════════ -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-eyebrow reveal">Patient Reviews</span>
+        <h2 class="section-title reveal reveal-delay-1">Words from our patients.</h2>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"I've always been nervous about dentists but the team at Ivory made me feel completely at ease. My teeth have never looked better — genuinely life-changing."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SC</div>
+            <div>
+              <div class="author-name">Sarah C.</div>
+              <div class="author-since">Patient since 2021</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"The whitening treatment was incredible. I was sceptical at first but the results speak for themselves. The whole experience was painless and the staff were brilliant."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#34C759;">JT</div>
+            <div>
+              <div class="author-name">James T.</div>
+              <div class="author-since">Patient since 2020</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Moved my whole family over to the Family Plan and it's been worth every penny. The kids actually look forward to their appointments now, which is a miracle!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#FF9500;">AP</div>
+            <div>
+              <div class="author-name">Amanda P.</div>
+              <div class="author-since">Patient since 2019</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ LOCATION ═══════════════════════════════════════════ -->
+  <section id="location">
+    <div class="container">
+      <div class="location-grid">
+        <div class="location-info">
+          <span class="section-eyebrow reveal">Find Us</span>
+          <h2 class="section-title reveal reveal-delay-1">Right in the heart<br/>of London.</h2>
+          <p class="section-lead reveal reveal-delay-2" style="margin-bottom:40px;">
+            Conveniently located near Marylebone station with easy access from across the city.
+          </p>
+
+          <!-- Live status widget -->
+          <div class="live-status-wrap reveal reveal-delay-1" id="liveStatusWrap">
+            <div class="live-status" id="liveStatus">
+              <span class="live-status-dot" id="liveStatusDot"></span>
+              <span class="live-status-text" id="liveStatusText">Checking hours…</span>
+            </div>
+            <div class="live-status-hours" id="liveStatusHours"></div>
+          </div>
+
+          <!-- Emergency banner — shown only when closed -->
+          <div class="emergency-banner" id="emergencyBanner" style="display:none;">
+            <div class="emergency-banner-inner">
+              <div class="emergency-icon"><i class="bi bi-telephone-fill"></i></div>
+              <div class="emergency-copy">
+                <strong>Dental Emergency?</strong>
+                <span>Call our 24-hour emergency line — we're here to help.</span>
+              </div>
+              <a href="tel:02071234999" class="emergency-cta">Call Now</a>
+            </div>
+          </div>
+
+          <div class="location-detail reveal reveal-delay-2">
+            <div class="location-detail-icon"><i class="bi bi-geo-alt-fill"></i></div>
+            <div class="location-detail-text">
+              <h4>Address</h4>
+              <p>42 Harley Street, Marylebone<br/>London, W1G 9PR</p>
+            </div>
+          </div>
+
+          <div class="location-detail reveal reveal-delay-3">
+            <div class="location-detail-icon"><i class="bi bi-clock-fill"></i></div>
+            <div class="location-detail-text">
+              <h4>Opening Hours</h4>
+              <p>Mon–Fri: 8:00am – 7:00pm<br/>Saturday: 9:00am – 4:00pm<br/>Sunday: Closed</p>
+            </div>
+          </div>
+
+          <div class="location-detail reveal reveal-delay-3">
+            <div class="location-detail-icon"><i class="bi bi-telephone-fill"></i></div>
+            <div class="location-detail-text">
+              <h4>Phone & Email</h4>
+              <p>020 7123 4567<br/>hello@ivorydental.co.uk</p>
+            </div>
+          </div>
+
+          <div class="location-detail reveal reveal-delay-4">
+            <div class="location-detail-icon"><i class="bi bi-train-front-fill"></i></div>
+            <div class="location-detail-text">
+              <h4>Getting Here</h4>
+              <p>Nearest tube: Regent's Park (Bakerloo) · 4 min walk<br/>Marylebone (Bakerloo/Overground) · 8 min walk</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-col reveal reveal-delay-2">
+          <div class="map-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.5!2d-0.1473!3d51.5222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761acb3f1f97e1%3A0x8c7e2df50cc41bc4!2sHarley%20St%2C%20London!5e0!3m2!1sen!2suk!4v1700000000000"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Ivory Dental location on Harley Street, London">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA BANNER ════════════════════════════════════════ -->
+  <section id="cta-banner">
+    <div class="cta-blob cta-blob-1"></div>
+    <div class="cta-blob cta-blob-2"></div>
+    <div class="container cta-inner">
+      <span class="section-eyebrow reveal" style="color:rgba(90,200,250,.9)">Ready?</span>
+      <h2 class="section-title reveal reveal-delay-1">Your best smile is<br/>one click away.</h2>
+      <p class="section-lead reveal reveal-delay-2">
+        Book a free consultation and take the first step towards a healthier, more confident you.
+      </p>
+      <div class="d-flex gap-3 justify-content-center flex-wrap reveal reveal-delay-3">
+        <a href="#plans" class="btn-hero-primary">Book Free Consultation</a>
+        <a href="tel:02071234567" class="btn-hero-ghost">Call us: 020 7123 4567</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ═════════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="footer-logo">🦷 Ivory Dental</div>
+          <div class="footer-tagline">Premium dentistry in the heart of London.<br/>Award-winning care since 2009.</div>
+          <div class="footer-social">
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-btn" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="#" class="social-btn" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <div class="footer-heading">Services</div>
+          <ul class="footer-links">
+            <li><a href="#services">General Dentistry</a></li>
+            <li><a href="#services">Teeth Whitening</a></li>
+            <li><a href="#services">Orthodontics</a></li>
+            <li><a href="#services">Dental Implants</a></li>
+            <li><a href="#services">Cosmetic Dentistry</a></li>
+            <li><a href="#services">Emergency Care</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <div class="footer-heading">Plans</div>
+          <ul class="footer-links">
+            <li><a href="#plans">Essential Plan</a></li>
+            <li><a href="#plans">Premium Plan</a></li>
+            <li><a href="#plans">Family Plan</a></li>
+            <li><a href="#">NHS Patients</a></li>
+            <li><a href="#">Corporate Plans</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <div class="footer-heading">Practice</div>
+          <ul class="footer-links">
+            <li><a href="#intro">About Us</a></li>
+            <li><a href="#testimonials">Patient Reviews</a></li>
+            <li><a href="#">Meet the Team</a></li>
+            <li><a href="#location">Find Us</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <div class="footer-heading">Help</div>
+          <ul class="footer-links">
+            <li><a href="#">New Patients</a></li>
+            <li><a href="#">Patient Forms</a></li>
+            <li><a href="#">Aftercare Advice</a></li>
+            <li><a href="#">Finance Options</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="footer-divider" />
+      <div class="d-flex flex-wrap gap-3 justify-content-between align-items-center">
+        <p class="footer-legal mb-0">© 2025 Ivory Dental Ltd. All rights reserved. Registered in England & Wales.</p>
+        <div class="d-flex gap-4">
+          <a href="#" class="footer-legal" style="color:rgba(255,255,255,.3); text-decoration:none;">Privacy Policy</a>
+          <a href="#" class="footer-legal" style="color:rgba(255,255,255,.3); text-decoration:none;">Cookie Policy</a>
+          <a href="#" class="footer-legal" style="color:rgba(255,255,255,.3); text-decoration:none;">Terms of Use</a>
+          <a href="#" class="footer-legal" style="color:rgba(255,255,255,.3); text-decoration:none;">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Site scripts -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
