@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LM Installations Ltd — Electrical & Security Specialists</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets4/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+
+    <!-- Logo -->
+    <a href="#hero" class="nav-logo" aria-label="LM Installations — home">
+      <img src="assets4/LM.png" alt="LM Installations logo">
+    </a>
+
+    <!-- Site links -->
+    <ul class="nav-links">
+      <li><a href="index.html">Site 1</a></li>
+      <li><a href="index2.html">Site 2</a></li>
+      <li><a href="index3.html">Site 3</a></li>
+      <li><a href="index5.html">Site 5</a></li>
+      <li><a href="index6.html">Site 6</a></li>
+      <li><a href="index7.html">Site 7</a></li>
+      <li><a href="font.html">Font</a></li>
+      <li><a href="gallery.html">Galleries</a></li>
+    </ul>
+
+    <!-- Right group: this-page dropdown + CTA -->
+    <div class="nav-right">
+
+      <!-- This page dropdown (active) -->
+      <div class="nav-dropdown nav-dropdown--active">
+        <button class="nav-dropdown-toggle nav-dropdown-toggle--active" aria-haspopup="true" aria-expanded="false">
+          This Page <span class="nav-dropdown-arrow">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="index4.html">Home</a></li>
+          <li><a href="index4-vacancies.html">Vacancies</a></li>
+        </ul>
+      </div>
+
+      <a href="#contact" class="nav-cta">Get a Quote</a>
+    </div>
+
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" aria-label="Hero">
+  <div class="hero-bg-line" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Est. 1990 · London & South East</p>
+      <h1 class="hero-title">
+        Every<br>system.<br>Every<br><em>building.</em>
+      </h1>
+      <p class="hero-body">Electrical installations, fire safety, security, and building systems — designed, installed, and maintained by a team that understands how complex buildings actually work.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Get a Quote</a>
+        <a href="#services" class="btn-ghost">See Our Services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">35<span>+</span></div>
+          <div class="stat-label">Years operating</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">NICEIC</div>
+          <div class="stat-label">Approved contractor</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">DBS</div>
+          <div class="stat-label">Checked engineers</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-building" aria-hidden="true">
+      <div class="building-svg-wrap">
+        <!-- Hero building: all five systems in their accent colours -->
+        <svg viewBox="0 0 400 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="60" y="80" width="280" height="380" rx="3" fill="#e8eef8" stroke="#c0cde0" stroke-width="1"/>
+          <rect x="50" y="68" width="300" height="18" rx="2" fill="#d0ddf0" stroke="#b8c8e0" stroke-width="1"/>
+          <line x1="60" y1="180" x2="340" y2="180" stroke="#c0cde0" stroke-width="0.75"/>
+          <line x1="60" y1="280" x2="340" y2="280" stroke="#c0cde0" stroke-width="0.75"/>
+          <line x1="60" y1="370" x2="340" y2="370" stroke="#c0cde0" stroke-width="0.75"/>
+          <rect x="90" y="100" width="48" height="56" rx="2" fill="#c8d8ee" stroke="#b0c4dc" stroke-width="0.5"/>
+          <rect x="176" y="100" width="48" height="56" rx="2" fill="#c8d8ee" stroke="#b0c4dc" stroke-width="0.5"/>
+          <rect x="262" y="100" width="48" height="56" rx="2" fill="#c8d8ee" stroke="#b0c4dc" stroke-width="0.5"/>
+          <rect x="90" y="200" width="48" height="56" rx="2" fill="#c8d8ee" stroke="#b0c4dc" stroke-width="0.5"/>
+          <rect x="176" y="200" width="48" height="56" rx="2" fill="#c8d8ee" stroke="#b0c4dc" stroke-width="0.5"/>
+          <rect x="262" y="200" width="48" height="56" rx="2" fill="#c8d8ee" stroke="#b0c4dc" stroke-width="0.5"/>
+          <rect x="90" y="295" width="48" height="56" rx="2" fill="#c8d8ee" stroke="#b0c4dc" stroke-width="0.5"/>
+          <rect x="262" y="295" width="48" height="56" rx="2" fill="#c8d8ee" stroke="#b0c4dc" stroke-width="0.5"/>
+          <rect x="158" y="390" width="84" height="70" rx="2" fill="#c8d8ee" stroke="#b0c4dc" stroke-width="0.5"/>
+          <rect x="183" y="390" width="8" height="70" fill="#d6e4f0"/>
+          <rect x="40" y="456" width="320" height="4" rx="2" fill="#b8c8dc"/>
+          <!-- Electrical: blue — plug socket -->
+          <rect x="64" y="282" width="24" height="20" rx="3" fill="#2b7de9"/>
+          <circle cx="70" cy="290" r="2.5" fill="#fff"/>
+          <circle cx="82" cy="290" r="2.5" fill="#fff"/>
+          <rect x="74" y="295" width="4" height="4" rx="1" fill="#fff" opacity="0.6"/>
+          <!-- Electrical conduit runs -->
+          <line x1="114" y1="80" x2="114" y2="460" stroke="#2b7de9" stroke-width="1" stroke-dasharray="3 5" opacity="0.5"/>
+          <line x1="286" y1="80" x2="286" y2="460" stroke="#2b7de9" stroke-width="1" stroke-dasharray="3 5" opacity="0.5"/>
+          <!-- Emergency light: blue pill shape with arrows -->
+          <rect x="156" y="170" width="38" height="16" rx="8" fill="#2b7de9"/>
+          <line x1="162" y1="178" x2="158" y2="174" stroke="#fff" stroke-width="1.2"/>
+          <line x1="162" y1="178" x2="158" y2="182" stroke="#fff" stroke-width="1.2"/>
+          <line x1="162" y1="178" x2="172" y2="178" stroke="#fff" stroke-width="1.2"/>
+          <line x1="188" y1="178" x2="192" y2="174" stroke="#fff" stroke-width="1.2"/>
+          <line x1="188" y1="178" x2="192" y2="182" stroke="#fff" stroke-width="1.2"/>
+          <line x1="188" y1="178" x2="178" y2="178" stroke="#fff" stroke-width="1.2"/>
+          <!-- Fire: orange — smoke detector disc -->
+          <circle cx="200" cy="88" r="10" fill="#e05c2b"/>
+          <circle cx="200" cy="88" r="5" fill="#fff" opacity="0.4"/>
+          <circle cx="200" cy="88" r="15" fill="none" stroke="#e05c2b" stroke-width="1.5" opacity="0.4"/>
+          <!-- Break-glass call point -->
+          <rect x="318" y="168" width="18" height="24" rx="2" fill="#e05c2b"/>
+          <rect x="321" y="171" width="12" height="17" rx="1" fill="#fff" opacity="0.3"/>
+          <line x1="321" y1="175" x2="333" y2="183" stroke="#e05c2b" stroke-width="1.2" opacity="0.6"/>
+          <!-- CCTV: teal — cameras -->
+          <g transform="translate(68,92)">
+            <rect x="0" y="3" width="18" height="12" rx="2" fill="#2bae7e"/>
+            <polygon points="18,5 26,1 26,17 18,13" fill="#2bae7e"/>
+            <circle cx="9" cy="9" r="3.5" fill="#fff" opacity="0.4"/>
+            <circle cx="9" cy="9" r="1.5" fill="#2bae7e"/>
+          </g>
+          <g transform="translate(302,92) scale(-1,1) translate(-18,0)">
+            <rect x="0" y="3" width="18" height="12" rx="2" fill="#2bae7e"/>
+            <polygon points="18,5 26,1 26,17 18,13" fill="#2bae7e"/>
+            <circle cx="9" cy="9" r="3.5" fill="#fff" opacity="0.4"/>
+          </g>
+          <g transform="translate(68,392)">
+            <rect x="0" y="3" width="18" height="12" rx="2" fill="#2bae7e"/>
+            <polygon points="18,5 26,1 26,17 18,13" fill="#2bae7e"/>
+            <circle cx="9" cy="9" r="3.5" fill="#fff" opacity="0.4"/>
+          </g>
+          <!-- Door entry: violet — intercom + keypad -->
+          <rect x="246" y="388" width="22" height="54" rx="3" fill="#8b5cf6"/>
+          <circle cx="257" cy="399" r="5" fill="#fff" opacity="0.35"/>
+          <rect x="250" y="410" width="14" height="3" rx="1.5" fill="#fff" opacity="0.45"/>
+          <rect x="250" y="417" width="14" height="3" rx="1.5" fill="#fff" opacity="0.45"/>
+          <rect x="250" y="424" width="14" height="3" rx="1.5" fill="#fff" opacity="0.45"/>
+          <line x1="158" y1="396" x2="244" y2="396" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="3 3"/>
+          <!-- Comms: amber — wifi + data outlet -->
+          <path d="M188 240 Q200 228 212 240" stroke="#e8b729" stroke-width="2" fill="none"/>
+          <path d="M181 234 Q200 216 219 234" stroke="#e8b729" stroke-width="1.5" fill="none" opacity="0.55"/>
+          <circle cx="200" cy="247" r="3.5" fill="#e8b729"/>
+          <!-- RJ45 data outlet -->
+          <rect x="128" y="262" width="16" height="11" rx="2" fill="#e8b729"/>
+          <line x1="130" y1="266" x2="130" y2="270" stroke="#fff" stroke-width="1"/>
+          <line x1="134" y1="265" x2="134" y2="270" stroke="#fff" stroke-width="1"/>
+          <line x1="138" y1="266" x2="138" y2="270" stroke="#fff" stroke-width="1"/>
+          <line x1="142" y1="265" x2="142" y2="270" stroke="#fff" stroke-width="1"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section id="intro" class="reveal">
+  <div class="intro-inner">
+    <div class="intro-lead">
+      Trusted by schools, councils, and <em>listed buildings</em> since 1990.
+    </div>
+    <div>
+      <p class="intro-body">LM Installations Ltd is an NICEIC approved electrical contractor serving London and the South East. We specialise in working within sensitive environments — heritage buildings, live schools, operational council facilities — where the quality of work and the discretion of our team matter as much as the technical spec.</p>
+      <div class="intro-badges">
+        <span class="badge badge-blue">NICEIC Approved</span>
+        <span class="badge badge-blue">DBS Checked Engineers</span>
+        <span class="badge">Listed Building Experience</span>
+        <span class="badge">Urmet Certified</span>
+        <span class="badge">Est. 1990</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES (STICKY SCROLL) -->
+<section id="services" aria-label="Services">
+  <div class="services-sticky-wrap">
+
+    <!-- Scrolling panels (left) -->
+    <div class="services-panels">
+
+      <!-- ELECTRICAL -->
+      <div class="service-panel" data-zone="electrical" id="panel-electrical">
+        <p class="panel-number">Layer 01</p>
+        <h2 class="panel-title">Electrical<br><em>Installations</em></h2>
+        <p class="panel-body">The foundation of everything we do. From initial design through to certification and ongoing maintenance, we handle the full electrical lifecycle of commercial buildings — installed to BS 7671 and tested to keep you compliant.</p>
+        <ul class="service-list">
+          <li>Full electrical design &amp; installation</li>
+          <li>Distribution board upgrades</li>
+          <li>Emergency &amp; exit lighting</li>
+          <li>Three-phase &amp; single-phase systems</li>
+          <li>EICR testing &amp; certification</li>
+          <li>Consumer unit replacement</li>
+          <li>LED &amp; low-voltage lighting</li>
+          <li>Planned &amp; reactive maintenance</li>
+          <li>PAT (appliance) testing</li>
+          <li>Emergency lighting testing</li>
+        </ul>
+        <p class="client-note">We work around your schedule — particularly important for schools and council buildings where disruption to daily operations must be minimised.</p>
+      </div>
+
+      <!-- FIRE -->
+      <div class="service-panel" data-zone="fire" id="panel-fire">
+        <p class="panel-number">Layer 02</p>
+        <h2 class="panel-title">Fire &amp; Smoke<br><em>Detection</em></h2>
+        <p class="panel-body">Life-safety systems designed, installed, and maintained to BS 5839. We cover the full range of premises — from schools and offices to listed buildings where surface-mounting and minimal intrusion are essential.</p>
+        <ul class="service-list">
+          <li>Fire alarm design to BS 5839</li>
+          <li>Smoke &amp; heat detectors</li>
+          <li>Manual call points</li>
+          <li>Alarm panel installation</li>
+          <li>Ongoing service contracts</li>
+          <li>System upgrades &amp; extensions</li>
+          <li>Emergency lighting integration</li>
+          <li>Weekly test &amp; annual inspection</li>
+        </ul>
+        <p class="client-note">Our fire detection work has been specified for public, commercial, and residential premises — including sensitive heritage and listed building environments.</p>
+      </div>
+
+      <!-- SECURITY -->
+      <div class="service-panel" data-zone="security" id="panel-security">
+        <p class="panel-number">Layer 03</p>
+        <h2 class="panel-title">CCTV &amp;<br><em>Security</em></h2>
+        <p class="panel-body">Modern security systems that go beyond basic surveillance. We design and install CCTV networks, intruder detection, and monitoring systems — with the discretion and build quality that listed buildings and school campuses require.</p>
+        <ul class="service-list">
+          <li>IP &amp; analogue CCTV systems</li>
+          <li>Internal &amp; perimeter cameras</li>
+          <li>Intruder alarm systems</li>
+          <li>Remote monitoring setup</li>
+          <li>Integration with access control</li>
+          <li>Recorded &amp; live footage systems</li>
+          <li>Maintenance &amp; fault response</li>
+          <li>Site security surveys</li>
+        </ul>
+        <p class="client-note">Regularly specified for schools and academies where safeguarding requirements mean camera coverage, recording reliability, and data security are critical.</p>
+      </div>
+
+      <!-- DOOR ENTRY -->
+      <div class="service-panel" data-zone="door" id="panel-door">
+        <p class="panel-number">Layer 04</p>
+        <h2 class="panel-title">Door Entry &amp;<br><em>Access Control</em></h2>
+        <p class="panel-body">Control who enters your building and when. From simple audio intercom systems to fully networked access control with Urmet-certified door entry — we install systems that suit the complexity of your site.</p>
+        <ul class="service-list">
+          <li>Audio &amp; video door entry</li>
+          <li>Urmet-certified installations</li>
+          <li>Proximity card &amp; fob readers</li>
+          <li>Electromagnetic &amp; electric strikes</li>
+          <li>Multi-zone access management</li>
+          <li>Visitor management integration</li>
+          <li>DDA-compliant door automation</li>
+          <li>Maintenance &amp; emergency response</li>
+        </ul>
+        <p class="client-note">We are listed as a certified Urmet installer — providing door entry solutions for single offices through to large multi-building school campuses.</p>
+      </div>
+
+      <!-- COMMS -->
+      <div class="service-panel" data-zone="comms" id="panel-comms">
+        <p class="panel-number">Layer 05</p>
+        <h2 class="panel-title">Data &amp;<br><em>Communications</em></h2>
+        <p class="panel-body">The infrastructure your building's digital systems depend on. Structured data cabling, telephone distribution, Wi-Fi mesh, and the low-voltage wiring that keeps modern buildings connected.</p>
+        <ul class="service-list">
+          <li>Structured data cabling (Cat5e/6/6a)</li>
+          <li>Telephone cabling &amp; distribution</li>
+          <li>Wi-Fi &amp; mesh networking</li>
+          <li>Server room infrastructure</li>
+          <li>Containment &amp; cable management</li>
+          <li>Ventilation wiring</li>
+          <li>Audio/video &amp; AV systems</li>
+          <li>Smart building systems (Hive, Nest)</li>
+        </ul>
+        <p class="client-note">From small office refreshes to full-school network infrastructure — we provide the cabling backbone that your IT systems rely on.</p>
+      </div>
+
+      <!-- ALL SYSTEMS — final panel -->
+      <div class="service-panel" data-zone="all" id="panel-all">
+        <p class="panel-number">Complete Coverage</p>
+        <h2 class="panel-title">One contractor.<br><em>Every system.</em></h2>
+        <p class="panel-body">Most buildings need all of these systems to work together — and most contractors only do one or two. LM Installations has been delivering the complete picture since 1990: a single point of contact for design, installation, certification, and ongoing maintenance across every discipline.</p>
+        <div class="all-systems-grid">
+          <div class="all-tag"><span class="all-tag-dot" style="background:#2b7de9"></span>Electrical &amp; Lighting</div>
+          <div class="all-tag"><span class="all-tag-dot" style="background:#e05c2b"></span>Fire &amp; Smoke Detection</div>
+          <div class="all-tag"><span class="all-tag-dot" style="background:#2bae7e"></span>CCTV &amp; Security</div>
+          <div class="all-tag"><span class="all-tag-dot" style="background:#8b5cf6"></span>Door Entry &amp; Access Control</div>
+          <div class="all-tag"><span class="all-tag-dot" style="background:#e8b729"></span>Data &amp; Communications</div>
+          <div class="all-tag"><span class="all-tag-dot" style="background:#2b7de9"></span>Emergency Lighting &amp; PAT Testing</div>
+        </div>
+        <p class="client-note">No handoffs between contractors. No gaps in responsibility. One team that understands how every system relates to the next — from the distribution board to the door reader.</p>
+        <div style="margin-top:32px">
+          <a href="#contact" class="btn-primary">Talk to us about your project</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sticky building (right, desktop) -->
+    <div class="services-sticky-building" aria-hidden="true">
+      <div class="building-container">
+        <svg id="sticky-building" viewBox="0 0 360 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Shell -->
+          <rect x="50" y="60" width="260" height="360" rx="3" fill="#dde8f5" stroke="#b8cce0" stroke-width="1"/>
+          <rect x="40" y="48" width="280" height="18" rx="2" fill="#ccdaf0" stroke="#aec4de" stroke-width="0.5"/>
+          <line x1="50" y1="150" x2="310" y2="150" stroke="#b8cce0" stroke-width="0.75"/>
+          <line x1="50" y1="240" x2="310" y2="240" stroke="#b8cce0" stroke-width="0.75"/>
+          <line x1="50" y1="330" x2="310" y2="330" stroke="#b8cce0" stroke-width="0.75"/>
+          <!-- Windows F3 -->
+          <rect x="78" y="76" width="44" height="52" rx="2" fill="#b8d0e8" stroke="#a0bcdc" stroke-width="0.5"/>
+          <rect x="158" y="76" width="44" height="52" rx="2" fill="#b8d0e8" stroke="#a0bcdc" stroke-width="0.5"/>
+          <rect x="238" y="76" width="44" height="52" rx="2" fill="#b8d0e8" stroke="#a0bcdc" stroke-width="0.5"/>
+          <!-- Windows F2 -->
+          <rect x="78" y="166" width="44" height="52" rx="2" fill="#b8d0e8" stroke="#a0bcdc" stroke-width="0.5"/>
+          <rect x="158" y="166" width="44" height="52" rx="2" fill="#b8d0e8" stroke="#a0bcdc" stroke-width="0.5"/>
+          <rect x="238" y="166" width="44" height="52" rx="2" fill="#b8d0e8" stroke="#a0bcdc" stroke-width="0.5"/>
+          <!-- Windows F1 -->
+          <rect x="78" y="256" width="44" height="52" rx="2" fill="#b8d0e8" stroke="#a0bcdc" stroke-width="0.5"/>
+          <rect x="238" y="256" width="44" height="52" rx="2" fill="#b8d0e8" stroke="#a0bcdc" stroke-width="0.5"/>
+          <!-- Door -->
+          <rect x="140" y="348" width="80" height="72" rx="2" fill="#b8d0e8" stroke="#a0bcdc" stroke-width="0.5"/>
+          <rect x="162" y="348" width="6" height="72" fill="#ccdaf0"/>
+          <rect x="30" y="418" width="300" height="3" rx="1.5" fill="#a8bcd4"/>
+
+          <!-- ── ELECTRICAL (blue) ──────────────────────── -->
+          <!-- conduit runs, dimmed -->
+          <g class="bld-zone" id="sbzone-electrical">
+            <!-- Vertical cable runs -->
+            <line x1="100" y1="60" x2="100" y2="418" stroke="#2b7de9" stroke-width="1" stroke-dasharray="3 5" opacity="0.7"/>
+            <line x1="262" y1="60" x2="262" y2="418" stroke="#2b7de9" stroke-width="1" stroke-dasharray="3 5" opacity="0.7"/>
+            <!-- Distribution board — left wall F1 -->
+            <rect x="53" y="250" width="22" height="34" rx="2" fill="#2b7de9"/>
+            <line x1="64" y1="258" x2="64" y2="268" stroke="#fff" stroke-width="1.5"/>
+            <rect x="57" y="272" width="14" height="3" rx="1" fill="#fff" opacity="0.5"/>
+            <rect x="57" y="277" width="14" height="3" rx="1" fill="#fff" opacity="0.5"/>
+            <!-- Plug socket F2 left wall -->
+            <rect x="53" y="162" width="22" height="16" rx="3" fill="#2b7de9"/>
+            <circle cx="59" cy="170" r="2.5" fill="#fff"/>
+            <circle cx="69" cy="170" r="2.5" fill="#fff"/>
+            <rect x="62" y="174" width="4" height="3" rx="1" fill="#fff" opacity="0.6"/>
+            <!-- Emergency exit light — F2 ceiling, green-tinted pill -->
+            <rect x="140" y="153" width="36" height="14" rx="7" fill="#2b7de9"/>
+            <line x1="147" y1="160" x2="143" y2="156" stroke="#fff" stroke-width="1.2"/>
+            <line x1="147" y1="160" x2="143" y2="164" stroke="#fff" stroke-width="1.2"/>
+            <line x1="147" y1="160" x2="157" y2="160" stroke="#fff" stroke-width="1.2"/>
+            <line x1="169" y1="160" x2="173" y2="156" stroke="#fff" stroke-width="1.2"/>
+            <line x1="169" y1="160" x2="173" y2="164" stroke="#fff" stroke-width="1.2"/>
+            <line x1="169" y1="160" x2="159" y2="160" stroke="#fff" stroke-width="1.2"/>
+            <!-- PAT tag on socket (tiny label) -->
+            <rect x="53" y="182" width="22" height="8" rx="1" fill="#2b7de9" opacity="0.7"/>
+            <text x="64" y="189" text-anchor="middle" font-family="'Inter',sans-serif" font-size="5" fill="#fff" font-weight="600">PAT</text>
+          </g>
+
+          <!-- ── FIRE (orange) ───────────────────────────── -->
+          <g class="bld-zone" id="sbzone-fire">
+            <!-- Smoke detector F3 ceiling — disc with rings -->
+            <circle cx="180" cy="68" r="8" fill="#e05c2b"/>
+            <circle cx="180" cy="68" r="4" fill="#fff" opacity="0.4"/>
+            <circle cx="180" cy="68" r="13" fill="none" stroke="#e05c2b" stroke-width="1.5" opacity="0.4"/>
+            <!-- Smoke detector F2 ceiling -->
+            <circle cx="130" cy="158" r="7" fill="#e05c2b"/>
+            <circle cx="130" cy="158" r="4" fill="#fff" opacity="0.35"/>
+            <circle cx="234" cy="158" r="7" fill="#e05c2b"/>
+            <circle cx="234" cy="158" r="4" fill="#fff" opacity="0.35"/>
+            <!-- Smoke detector F1 ceiling -->
+            <circle cx="180" cy="248" r="7" fill="#e05c2b"/>
+            <circle cx="180" cy="248" r="4" fill="#fff" opacity="0.35"/>
+            <!-- Break-glass call point — red box with diagonal line -->
+            <rect x="294" y="138" width="14" height="20" rx="2" fill="#e05c2b"/>
+            <rect x="297" y="141" width="8" height="13" rx="1" fill="#fff" opacity="0.3"/>
+            <line x1="297" y1="145" x2="305" y2="151" stroke="#e05c2b" stroke-width="1.2"/>
+            <rect x="294" y="228" width="14" height="20" rx="2" fill="#e05c2b"/>
+            <rect x="297" y="231" width="8" height="13" rx="1" fill="#fff" opacity="0.3"/>
+            <line x1="297" y1="235" x2="305" y2="241" stroke="#e05c2b" stroke-width="1.2"/>
+            <!-- Heat/fire wavelines from detector -->
+            <path d="M172 55 Q176 48 180 55 Q184 48 188 55" stroke="#e05c2b" stroke-width="1.2" fill="none" opacity="0.6"/>
+          </g>
+
+          <!-- ── SECURITY / CCTV (teal) ──────────────────── -->
+          <g class="bld-zone" id="sbzone-security">
+            <!-- Camera top-left corner -->
+            <g transform="translate(54,64)">
+              <rect x="0" y="3" width="18" height="13" rx="2" fill="#2bae7e"/>
+              <polygon points="18,5 27,0 27,18 18,13" fill="#2bae7e"/>
+              <circle cx="9" cy="9" r="4" fill="#fff" opacity="0.35"/>
+              <circle cx="9" cy="9" r="2" fill="#2bae7e"/>
+            </g>
+            <!-- Camera top-right corner (mirrored) -->
+            <g transform="translate(274,64) scale(-1,1) translate(-18,0)">
+              <rect x="0" y="3" width="18" height="13" rx="2" fill="#2bae7e"/>
+              <polygon points="18,5 27,0 27,18 18,13" fill="#2bae7e"/>
+              <circle cx="9" cy="9" r="4" fill="#fff" opacity="0.35"/>
+              <circle cx="9" cy="9" r="2" fill="#2bae7e"/>
+            </g>
+            <!-- Camera at entrance -->
+            <g transform="translate(54,352)">
+              <rect x="0" y="3" width="18" height="13" rx="2" fill="#2bae7e"/>
+              <polygon points="18,5 27,0 27,18 18,13" fill="#2bae7e"/>
+              <circle cx="9" cy="9" r="4" fill="#fff" opacity="0.35"/>
+              <circle cx="9" cy="9" r="2" fill="#2bae7e"/>
+            </g>
+            <!-- PIR motion sensor — F1 right wall -->
+            <rect x="294" y="272" width="18" height="14" rx="2" fill="#2bae7e"/>
+            <path d="M284 279 Q290 272 294 279" stroke="#2bae7e" stroke-width="1.2" fill="none"/>
+            <path d="M280 279 Q287 268 294 279" stroke="#2bae7e" stroke-width="1" fill="none" opacity="0.5"/>
+            <circle cx="303" cy="279" r="3" fill="#fff" opacity="0.4"/>
+          </g>
+
+          <!-- ── DOOR ENTRY (violet) ─────────────────────── -->
+          <g class="bld-zone" id="sbzone-door">
+            <!-- Intercom panel beside front door -->
+            <rect x="226" y="350" width="20" height="50" rx="3" fill="#8b5cf6"/>
+            <!-- Speaker grille circles -->
+            <circle cx="236" cy="360" r="5" fill="#fff" opacity="0.3"/>
+            <circle cx="236" cy="360" r="2.5" fill="#8b5cf6"/>
+            <!-- Keypad dots -->
+            <circle cx="231" cy="373" r="1.5" fill="#fff" opacity="0.5"/>
+            <circle cx="236" cy="373" r="1.5" fill="#fff" opacity="0.5"/>
+            <circle cx="241" cy="373" r="1.5" fill="#fff" opacity="0.5"/>
+            <circle cx="231" cy="380" r="1.5" fill="#fff" opacity="0.5"/>
+            <circle cx="236" cy="380" r="1.5" fill="#fff" opacity="0.5"/>
+            <circle cx="241" cy="380" r="1.5" fill="#fff" opacity="0.5"/>
+            <circle cx="236" cy="387" r="1.5" fill="#fff" opacity="0.5"/>
+            <!-- Mag-lock dashed line across door frame -->
+            <line x1="140" y1="354" x2="224" y2="354" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="4 2"/>
+            <!-- Card reader left of door F1 -->
+            <rect x="53" y="318" width="12" height="20" rx="2" fill="#8b5cf6"/>
+            <rect x="55" y="321" width="8" height="14" rx="1" fill="#fff" opacity="0.3"/>
+            <!-- Swipe line on reader -->
+            <line x1="56" y1="329" x2="62" y2="329" stroke="#8b5cf6" stroke-width="1"/>
+          </g>
+
+          <!-- ── COMMS / DATA (amber) ────────────────────── -->
+          <g class="bld-zone" id="sbzone-comms">
+            <!-- Cable tray vertical run -->
+            <rect x="53" y="62" width="8" height="350" rx="2" fill="#e8b729" opacity="0.18"/>
+            <line x1="57" y1="62" x2="57" y2="412" stroke="#e8b729" stroke-width="0.75" stroke-dasharray="2 3"/>
+            <!-- WiFi dome F2 (3 arcs + dot) -->
+            <path d="M168 200 Q180 188 192 200" stroke="#e8b729" stroke-width="2" fill="none"/>
+            <path d="M160 194 Q180 176 200 194" stroke="#e8b729" stroke-width="1.5" fill="none" opacity="0.5"/>
+            <path d="M153 188 Q180 164 207 188" stroke="#e8b729" stroke-width="1" fill="none" opacity="0.3"/>
+            <circle cx="180" cy="207" r="3.5" fill="#e8b729"/>
+            <!-- RJ45 wall outlet F1 -->
+            <rect x="118" y="268" width="16" height="11" rx="2" fill="#e8b729"/>
+            <line x1="121" y1="272" x2="121" y2="276" stroke="#fff" stroke-width="1"/>
+            <line x1="125" y1="271" x2="125" y2="276" stroke="#fff" stroke-width="1"/>
+            <line x1="129" y1="272" x2="129" y2="276" stroke="#fff" stroke-width="1"/>
+            <!-- RJ45 wall outlet F3 -->
+            <rect x="118" y="88" width="16" height="11" rx="2" fill="#e8b729"/>
+            <line x1="121" y1="92" x2="121" y2="96" stroke="#fff" stroke-width="1"/>
+            <line x1="125" y1="91" x2="125" y2="96" stroke="#fff" stroke-width="1"/>
+            <line x1="129" y1="92" x2="129" y2="96" stroke="#fff" stroke-width="1"/>
+          </g>
+
+          <!-- Active zone label -->
+          <text id="building-active-label" x="180" y="445"
+            text-anchor="middle"
+            font-family="'Barlow Condensed', sans-serif"
+            font-size="13" font-weight="600" letter-spacing="1.5"
+            fill="#0d1f3c" opacity="0"
+            style="transition: opacity 0.4s">SYSTEM ACTIVE</text>
+        </svg>
+
+        <!-- Legend -->
+        <div class="building-legend" id="building-legend">
+          <div class="legend-item" data-zone="electrical">
+            <div class="legend-dot" style="background:#2b7de9"></div>
+            <span>Electrical &amp; Lighting</span>
+          </div>
+          <div class="legend-item" data-zone="fire">
+            <div class="legend-dot" style="background:#e05c2b"></div>
+            <span>Fire &amp; Smoke</span>
+          </div>
+          <div class="legend-item" data-zone="security">
+            <div class="legend-dot" style="background:#2bae7e"></div>
+            <span>CCTV &amp; Security</span>
+          </div>
+          <div class="legend-item" data-zone="door">
+            <div class="legend-dot" style="background:#8b5cf6"></div>
+            <span>Door Entry</span>
+          </div>
+          <div class="legend-item" data-zone="comms">
+            <div class="legend-dot" style="background:#e8b729"></div>
+            <span>Data &amp; Comms</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHO WE WORK WITH -->
+<section id="clients" aria-label="Who we work with">
+  <div class="clients-inner">
+    <div class="reveal">
+      <p class="section-label">Who we work with</p>
+      <h2 class="section-title">Built for<br><em>complex buildings</em><br>and careful clients.</h2>
+    </div>
+    <div class="client-cards reveal">
+      <div class="client-card">
+        <div class="client-card-icon">SC</div>
+        <h3 class="client-card-title">Schools &amp; Academies</h3>
+        <p class="client-card-body">We have a long track record with schools, free schools, and academy trusts across London. Our engineers are all DBS checked, and we understand the constraints of working in occupied school buildings — term time, safeguarding zones, and minimal disruption to teaching.</p>
+        <span class="client-card-tag">DBS Checked · Safeguarding Aware</span>
+      </div>
+      <div class="client-card">
+        <div class="client-card-icon">LA</div>
+        <h3 class="client-card-title">Local Government</h3>
+        <p class="client-card-body">Council buildings, civic centres, and housing estates require contractors who understand procurement processes, compliance documentation, and the importance of keeping services running. We have extensive experience delivering for local authorities across the London area.</p>
+        <span class="client-card-tag">Compliance-Ready · Fully Documented</span>
+      </div>
+      <div class="client-card">
+        <div class="client-card-icon">LB</div>
+        <h3 class="client-card-title">Listed &amp; Heritage Buildings</h3>
+        <p class="client-card-body">Working inside a listed building demands a different approach — concealed cabling routes, sympathetic fixings, close liaison with conservation officers. We bring the sensitivity and planning that heritage environments require, without compromising on modern system performance.</p>
+        <span class="client-card-tag">Heritage Experience · Minimal Intrusion</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section id="trust" class="reveal" aria-label="Accreditations and trust">
+  <div class="trust-inner">
+    <div class="trust-left">
+      <h2 class="trust-title">Approved, checked, and accountable.</h2>
+      <p class="trust-body">Our accreditations aren't just paperwork — they represent decades of work done to the right standard, with the documentation to prove it.</p>
+    </div>
+    <div class="trust-items">
+      <div class="trust-item">
+        <div class="trust-item-title">NICEIC Approved</div>
+        <p class="trust-item-body">Independently assessed for technical competence — insurance-backed assurance on every installation.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-title">DBS Checked</div>
+        <p class="trust-item-body">All on-site engineers and apprentices hold current DBS checks. Documentation available on request.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-title">Urmet Certified</div>
+        <p class="trust-item-body">Listed in the Urmet installer directory for door entry and access control across all building types.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-title">BS 5839 Compliant</div>
+        <p class="trust-item-body">Fire alarm design and installation to the full British Standard — with inspection, testing, and service records.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-title">Equal Opportunities</div>
+        <p class="trust-item-body">A workplace free from discrimination and bullying — regardless of gender, age, race, religion, or disability.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-title">Est. 1990</div>
+        <p class="trust-item-body">Over 35 years serving London and the South East — a track record built on consistently delivering good work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" aria-label="Contact">
+  <div class="contact-glow" aria-hidden="true"></div>
+  <div class="contact-inner">
+    <p class="contact-label">Get in touch</p>
+    <h2 class="contact-title">Ready to talk<br>about your building?</h2>
+    <p class="contact-body">Whether you have a full specification or just an initial requirement, we're happy to discuss your project and provide a detailed, no-obligation quote.</p>
+    <div class="contact-actions">
+      <a href="mailto:info@lminstallations.co.uk" class="btn-primary-light">Email Us</a>
+      <a href="tel:02085078958" class="btn-ghost-light">020 8507 8958</a>
+    </div>
+    <div class="contact-detail">
+      <span>LM Installations Ltd, Barking, London</span>
+      <span>·</span>
+      <a href="http://www.lminstallations.co.uk">lminstallations.co.uk</a>
+      <span>·</span>
+      <a href="mailto:info@lminstallations.co.uk">info@lminstallations.co.uk</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+  <!-- Decorative building silhouette -->
+  <svg class="footer-building-bg" width="320" height="340" viewBox="0 0 320 340" fill="none" aria-hidden="true">
+    <rect x="30" y="40" width="260" height="300" rx="2" fill="#fff"/>
+    <rect x="20" y="28" width="280" height="18" rx="2" fill="#fff"/>
+    <rect x="30" y="110" x2="290" y2="110" width="260" height="1" fill="none" stroke="#fff" stroke-width="1"/>
+    <rect x="30" y="180" width="260" height="1" fill="none" stroke="#fff"/>
+    <rect x="30" y="250" width="260" height="1" fill="none" stroke="#fff"/>
+    <rect x="56" y="52" width="40" height="44" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <rect x="140" y="52" width="40" height="44" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <rect x="224" y="52" width="40" height="44" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <rect x="56" y="120" width="40" height="44" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <rect x="140" y="120" width="40" height="44" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <rect x="224" y="120" width="40" height="44" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <rect x="56" y="192" width="40" height="44" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <rect x="224" y="192" width="40" height="44" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <rect x="128" y="258" width="64" height="82" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/>
+  </svg>
+
+  <div class="footer-inner">
+
+    <!-- Top: brand + vacancies -->
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="LM.png" alt="LM Installations" class="footer-logo">
+        <p class="footer-tagline">
+          <strong>Every system. Every building.</strong>
+          Electrical, fire, security, and building systems — designed, installed, and maintained since 1990.
+        </p>
+      </div>
+
+      <div id="footer-vac-box" class="footer-vacancies footer-vacancies--loading" aria-live="polite">
+        <!-- Populated by main.js reading vacancies.csv -->
+      </div>
+    </div>
+
+    <!-- Link columns -->
+    <div class="footer-links">
+
+      <div class="footer-col">
+        <p class="footer-col-title">Services</p>
+        <ul>
+          <li><a href="#panel-electrical">Electrical Installations</a></li>
+          <li><a href="#panel-fire">Fire &amp; Smoke Detection</a></li>
+          <li><a href="#panel-security">CCTV &amp; Security</a></li>
+          <li><a href="#panel-door">Door Entry &amp; Access Control</a></li>
+          <li><a href="#panel-comms">Data &amp; Communications</a></li>
+          <li><a href="#panel-electrical">Emergency Lighting</a></li>
+          <li><a href="#panel-electrical">PAT Testing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-col-title">Company</p>
+        <ul>
+          <li><a href="#intro">About Us</a></li>
+          <li><a href="#clients">Who We Work With</a></li>
+          <li><a href="#trust">Accreditations</a></li>
+          <li><a href="vacancies.html">Vacancies</a></li>
+          <li><a href="#contact">Get a Quote</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-col-title">Sectors</p>
+        <ul>
+          <li><a href="#clients">Schools &amp; Academies</a></li>
+          <li><a href="#clients">Local Government</a></li>
+          <li><a href="#clients">Listed Buildings</a></li>
+          <li><a href="#clients">Commercial Offices</a></li>
+          <li><a href="#clients">Housing &amp; Residential</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-col-title">Contact</p>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Phone</span>
+          <a href="tel:02085078958">020 8507 8958</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Email</span>
+          <a href="mailto:info@lminstallations.co.uk">info@lminstallations.co.uk</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Address</span>
+          355 Ripple Road, Barking,<br>London IG11 9PN
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p class="footer-legal">
+        © 2025 LM Installations Ltd. Registered in England.
+        &nbsp;·&nbsp; <a href="#privacy">Privacy Policy</a>
+        &nbsp;·&nbsp; <a href="#terms">Terms &amp; Conditions</a>
+      </p>
+      <div class="footer-accreditations">
+        <span class="footer-badge">NICEIC Approved</span>
+        <span class="footer-badge">DBS Checked</span>
+        <span class="footer-badge">Urmet Certified</span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="assets4/main.js"></script>
+</body>
+</html>

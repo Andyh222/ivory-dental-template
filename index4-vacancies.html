@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vacancies — LM Installations Ltd</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets4/style.css">
+<style>
+  /* ── VACANCIES PAGE SPECIFIC ──────────────────────── */
+  #vac-hero {
+    background: var(--off-white);
+    border-bottom: 1px solid var(--line);
+    padding: 130px 80px 72px;
+  }
+  .vac-hero-inner {
+    max-width: 1400px; margin: 0 auto;
+  }
+  .vac-eyebrow {
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--blue); margin-bottom: 18px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .vac-eyebrow::before {
+    content: ''; display: block;
+    width: 28px; height: 2px; background: var(--blue);
+  }
+  .vac-title {
+    font-family: var(--font-display);
+    font-size: clamp(44px, 5vw, 72px);
+    font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.02em; line-height: 1.0;
+    color: var(--navy); margin-bottom: 20px;
+  }
+  .vac-title em { font-style: normal; color: var(--blue); }
+  .vac-intro {
+    font-size: 17px; font-weight: 400;
+    color: var(--text-mid); max-width: 560px; line-height: 1.75;
+  }
+  .vac-count-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 24px;
+    font-size: 13px; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--blue);
+    background: var(--blue-light);
+    padding: 8px 16px; border-radius: 20px;
+  }
+  .vac-count-badge::before {
+    content: ''; display: block;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--blue);
+  }
+
+  /* ── JOB CARDS ─────────────────────────────────────── */
+  #vac-listings {
+    background: var(--white);
+    padding: 72px 80px 100px;
+  }
+  .vac-listings-inner {
+    max-width: 1400px; margin: 0 auto;
+  }
+  .vac-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .job-card {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--white);
+    padding: 36px 36px 28px;
+    display: flex; flex-direction: column;
+    transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+  }
+  .job-card:hover {
+    box-shadow: 0 8px 32px rgba(13,31,60,0.08);
+    border-color: var(--line-blue);
+    transform: translateY(-2px);
+  }
+  .job-card-type {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--blue);
+    background: var(--blue-light);
+    display: inline-block;
+    padding: 4px 12px; border-radius: 12px;
+    margin-bottom: 20px; align-self: flex-start;
+  }
+  .job-card-type--part {
+    color: #7c3aed; background: #ede9fe;
+  }
+  .job-card-title {
+    font-family: var(--font-display);
+    font-size: 28px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.02em;
+    color: var(--navy); margin-bottom: 12px; line-height: 1.1;
+  }
+  .job-card-desc {
+    font-size: 15px; font-weight: 400;
+    color: var(--text-mid); line-height: 1.7;
+    margin-bottom: 24px; flex: 1;
+  }
+  .job-card-meta {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    margin-bottom: 24px;
+  }
+  .job-meta-item {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 13px; color: var(--text-soft);
+  }
+  .job-meta-icon {
+    width: 14px; height: 14px; flex-shrink: 0; opacity: 0.6;
+  }
+  .job-card-benefits {
+    font-size: 13px; color: var(--text-soft);
+    padding: 12px 16px;
+    background: var(--off-white);
+    border-radius: 6px;
+    margin-bottom: 24px;
+  }
+  .job-card-benefits strong {
+    display: block; font-weight: 600;
+    color: var(--text-mid); margin-bottom: 4px;
+    font-size: 11px; text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .job-card-apply {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    background: var(--blue); color: #fff;
+    padding: 12px 22px; border-radius: 4px;
+    text-decoration: none; align-self: flex-start;
+    transition: background 0.2s;
+  }
+  .job-card-apply:hover { background: var(--blue-dim); }
+  .job-card-apply::after { content: '→'; }
+
+  /* Loading state */
+  .vac-loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 0;
+    color: var(--text-soft);
+    font-size: 15px;
+  }
+
+  /* No vacancies state */
+  .vac-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 80px 40px;
+    border: 1px dashed var(--line);
+    border-radius: 8px;
+  }
+  .vac-empty-title {
+    font-family: var(--font-display);
+    font-size: 32px; font-weight: 700;
+    text-transform: uppercase;
+    color: var(--navy); margin-bottom: 14px;
+  }
+  .vac-empty-body {
+    font-size: 15px; color: var(--text-soft);
+    max-width: 420px; margin: 0 auto 28px;
+    line-height: 1.7;
+  }
+
+  /* Speculative application strip -->
+  .vac-speculative {
+    background: var(--navy);
+    padding: 60px 80px;
+  }
+  .vac-speculative-inner {
+    max-width: 1400px; margin: 0 auto;
+    display: flex; align-items: center;
+    justify-content: space-between; gap: 40px;
+    flex-wrap: wrap;
+  }
+  .vac-spec-title {
+    font-family: var(--font-display);
+    font-size: 28px; font-weight: 700;
+    text-transform: uppercase; color: #fff; margin-bottom: 8px;
+  }
+  .vac-spec-body {
+    font-size: 15px; font-weight: 300;
+    color: rgba(255,255,255,0.6); max-width: 480px; line-height: 1.7;
+  }
+
+  @media (max-width: 900px) {
+    #vac-hero { padding: 110px 24px 56px; }
+    #vac-listings { padding: 48px 24px 72px; }
+    .vac-grid { grid-template-columns: 1fr; }
+    .vac-speculative { padding: 48px 24px; }
+    .vac-speculative-inner { flex-direction: column; }
+  }
+  @media (max-width: 600px) {
+    #vac-hero { padding: 100px 20px 48px; }
+    #vac-listings { padding: 40px 20px 60px; }
+    .vac-speculative { padding: 40px 20px; }
+    .job-card { padding: 24px 20px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+
+    <!-- Logo -->
+    <a href="index4.html" class="nav-logo" aria-label="LM Installations — home">
+      <img src="assets4/LM.png" alt="LM Installations logo">
+    </a>
+
+    <!-- Site links -->
+    <ul class="nav-links">
+      <li><a href="index.html">Site 1</a></li>
+      <li><a href="index2.html">Site 2</a></li>
+      <li><a href="index3.html">Site 3</a></li>
+      <li><a href="index5.html">Site 5</a></li>
+      <li><a href="index6.html">Site 6</a></li>
+      <li><a href="index7.html">Site 7</a></li>
+      <li><a href="font.html">Font</a></li>
+      <li><a href="gallery.html">Galleries</a></li>
+    </ul>
+
+    <!-- Right group: this-page dropdown + CTA -->
+    <div class="nav-right">
+
+      <!-- This page dropdown (active) -->
+      <div class="nav-dropdown nav-dropdown--active">
+        <button class="nav-dropdown-toggle nav-dropdown-toggle--active" aria-haspopup="true" aria-expanded="false">
+          This Page <span class="nav-dropdown-arrow">▾</span>
+        </button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="index4.html">Home</a></li>
+          <li><a href="index4-vacancies.html">Vacancies</a></li>
+        </ul>
+      </div>
+
+      <a href="index4.html#contact" class="nav-cta">Get a Quote</a>
+    </div>
+
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="vac-hero">
+  <div class="vac-hero-inner">
+    <p class="vac-eyebrow">Work with us</p>
+    <h1 class="vac-title">Current<br><em>Vacancies.</em></h1>
+    <p class="vac-intro">We're a small, experienced team who take pride in doing the job properly. If that sounds like you, we'd love to hear from you.</p>
+    <div id="vac-count-badge" class="vac-count-badge" style="display:none">
+      <!-- populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- JOB LISTINGS -->
+<section id="vac-listings" aria-label="Current job listings">
+  <div class="vac-listings-inner">
+    <div class="vac-grid" id="vac-grid">
+      <p class="vac-loading">Loading vacancies…</p>
+    </div>
+  </div>
+</section>
+
+<!-- SPECULATIVE STRIP -->
+<section class="vac-speculative">
+  <div class="vac-speculative-inner">
+    <div>
+      <p class="vac-spec-title">Don't see the right role?</p>
+      <p class="vac-spec-body">We're always interested in hearing from qualified electricians, apprentices, and experienced tradespeople. Send us your CV and we'll keep it on file.</p>
+    </div>
+    <a href="mailto:info@lminstallations.co.uk?subject=Speculative%20Application" class="btn-primary-light">
+      Send a Speculative CV
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER (identical to main site) -->
+<footer>
+  <svg class="footer-building-bg" width="320" height="340" viewBox="0 0 320 340" fill="none" aria-hidden="true">
+    <rect x="30" y="40" width="260" height="300" rx="2" fill="#fff"/>
+    <rect x="20" y="28" width="280" height="18" rx="2" fill="#fff"/>
+    <rect x="56" y="52" width="40" height="44" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <rect x="140" y="52" width="40" height="44" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <rect x="224" y="52" width="40" height="44" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <rect x="56" y="120" width="40" height="44" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <rect x="140" y="120" width="40" height="44" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <rect x="224" y="120" width="40" height="44" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <rect x="128" y="258" width="64" height="82" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/>
+  </svg>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="LM.png" alt="LM Installations" class="footer-logo">
+        <p class="footer-tagline">
+          <strong>Every system. Every building.</strong>
+          Electrical, fire, security, and building systems — designed, installed, and maintained since 1990.
+        </p>
+      </div>
+      <div id="footer-vac-box" class="footer-vacancies footer-vacancies--loading" aria-live="polite"></div>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <p class="footer-col-title">Services</p>
+        <ul>
+          <li><a href="lm-installations.html#panel-electrical">Electrical Installations</a></li>
+          <li><a href="lm-installations.html#panel-fire">Fire &amp; Smoke Detection</a></li>
+          <li><a href="lm-installations.html#panel-security">CCTV &amp; Security</a></li>
+          <li><a href="lm-installations.html#panel-door">Door Entry &amp; Access Control</a></li>
+          <li><a href="lm-installations.html#panel-comms">Data &amp; Communications</a></li>
+          <li><a href="lm-installations.html#panel-electrical">Emergency Lighting</a></li>
+          <li><a href="lm-installations.html#panel-electrical">PAT Testing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Company</p>
+        <ul>
+          <li><a href="lm-installations.html#intro">About Us</a></li>
+          <li><a href="lm-installations.html#clients">Who We Work With</a></li>
+          <li><a href="lm-installations.html#trust">Accreditations</a></li>
+          <li><a href="index4-vacancies.html">Vacancies</a></li>
+          <li><a href="lm-installations.html#contact">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Sectors</p>
+        <ul>
+          <li><a href="lm-installations.html#clients">Schools &amp; Academies</a></li>
+          <li><a href="lm-installations.html#clients">Local Government</a></li>
+          <li><a href="lm-installations.html#clients">Listed Buildings</a></li>
+          <li><a href="lm-installations.html#clients">Commercial Offices</a></li>
+          <li><a href="lm-installations.html#clients">Housing &amp; Residential</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Contact</p>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Phone</span>
+          <a href="tel:02085078958">020 8507 8958</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Email</span>
+          <a href="mailto:info@lminstallations.co.uk">info@lminstallations.co.uk</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Address</span>
+          355 Ripple Road, Barking,<br>London IG11 9PN
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-legal">
+        © 2025 LM Installations Ltd. Registered in England.
+        &nbsp;·&nbsp; <a href="#privacy">Privacy Policy</a>
+        &nbsp;·&nbsp; <a href="#terms">Terms &amp; Conditions</a>
+      </p>
+      <div class="footer-accreditations">
+        <span class="footer-badge">NICEIC Approved</span>
+        <span class="footer-badge">DBS Checked</span>
+        <span class="footer-badge">Urmet Certified</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ── Shared CSV parser ──────────────────────────────── */
+function parseCSV(text) {
+  const lines = text.trim().split('\n');
+  if (lines.length < 2) return [];
+  const header = lines[0].replace(/^\uFEFF/, '').split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+  return lines.slice(1).map(line => {
+    const fields = [];
+    let inQuote = false, current = '';
+    for (let i = 0; i < line.length; i++) {
+      const ch = line[i];
+      if (ch === '"') { inQuote = !inQuote; }
+      else if (ch === ',' && !inQuote) { fields.push(current.trim()); current = ''; }
+      else { current += ch; }
+    }
+    fields.push(current.trim());
+    const obj = {};
+    header.forEach((h, i) => { obj[h] = (fields[i] || '').replace(/^"|"$/g, ''); });
+    return obj;
+  }).filter(row => row['Job Title'] && row['Job Title'].trim() !== '');
+}
+
+/* ── Nav scroll ─────────────────────────────────────── */
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+nav.classList.toggle('scrolled', window.scrollY > 40);
+
+const hamburger = document.getElementById('nav-hamburger');
+hamburger.addEventListener('click', () => {
+  const open = nav.classList.toggle('nav-mobile-open');
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+
+  if (open) {
+    requestAnimationFrame(() => {
+      const navLinks = nav.querySelector('.nav-links');
+      const navRight = nav.querySelector('.nav-right');
+      if (navLinks && navRight) {
+        navRight.style.top = navLinks.getBoundingClientRect().bottom + 'px';
+      }
+    });
+  }
+});
+
+/* ── Dropdown toggles ───────────────────────────────── */
+document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+  const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = dropdown.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen);
+    document.querySelectorAll('.nav-dropdown').forEach(other => {
+      if (other !== dropdown) {
+        other.classList.remove('open');
+        other.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', false);
+      }
+    });
+  });
+});
+document.addEventListener('click', () => {
+  document.querySelectorAll('.nav-dropdown.open').forEach(d => {
+    d.classList.remove('open');
+    d.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', false);
+  });
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.nav-dropdown.open').forEach(d => {
+      d.classList.remove('open');
+      d.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', false);
+    });
+  }
+});
+
+/* ── Load jobs into grid ────────────────────────────── */
+async function loadJobs() {
+  const grid = document.getElementById('vac-grid');
+  const badge = document.getElementById('vac-count-badge');
+  let jobs = [];
+
+  try {
+    const res = await fetch('vacancies.csv');
+    if (res.ok) jobs = parseCSV(await res.text());
+  } catch(e) {}
+
+  grid.innerHTML = '';
+
+  if (jobs.length === 0) {
+    grid.innerHTML = `
+      <div class="vac-empty">
+        <p class="vac-empty-title">No vacancies right now.</p>
+        <p class="vac-empty-body">We're not actively recruiting at the moment, but we're always happy to hear from talented people. Send us a speculative CV using the link below.</p>
+      </div>`;
+    return;
+  }
+
+  // Show count badge
+  const n = jobs.length;
+  badge.textContent = `${n} position${n !== 1 ? 's' : ''} available`;
+  badge.style.display = 'inline-flex';
+
+  jobs.forEach(job => {
+    const isPartTime = (job['Full or Part Time'] || '').toLowerCase().includes('part');
+    const typeClass  = isPartTime ? 'job-card-type--part' : '';
+    const typeLabel  = job['Full or Part Time'] || 'Full Time';
+    const subject    = encodeURIComponent(`Application — ${job['Job Title']}`);
+    const card = document.createElement('article');
+    card.className = 'job-card reveal';
+    card.innerHTML = `
+      <span class="job-card-type ${typeClass}">${typeLabel}</span>
+      <h2 class="job-card-title">${job['Job Title']}</h2>
+      <p class="job-card-desc">${job['Description'] || ''}</p>
+      <div class="job-card-meta">
+        ${job['Location'] ? `<span class="job-meta-item">
+          <svg class="job-meta-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5s4.5-5 4.5-8.5c0-2.5-2-4.5-4.5-4.5z"/>
+            <circle cx="8" cy="6" r="1.5"/>
+          </svg>
+          ${job['Location']}
+        </span>` : ''}
+        ${job['Salary'] ? `<span class="job-meta-item">
+          <svg class="job-meta-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="1.5" y="3.5" width="13" height="9" rx="1.5"/>
+            <path d="M5 8h6M8 5.5v5"/>
+          </svg>
+          ${job['Salary']}
+        </span>` : ''}
+      </div>
+      ${job['Benefits'] ? `<div class="job-card-benefits"><strong>Benefits include</strong>${job['Benefits']}</div>` : ''}
+      <a href="mailto:info@lminstallations.co.uk?subject=${subject}" class="job-card-apply">Apply for this role</a>
+    `;
+    grid.appendChild(card);
+  });
+
+  /* Trigger reveal animations */
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  grid.querySelectorAll('.reveal').forEach(el => io.observe(el));
+}
+
+/* ── Footer vac box (same logic as main.js) ─────────── */
+async function loadFooterVac() {
+  const box = document.getElementById('footer-vac-box');
+  if (!box) return;
+  let jobs = [];
+  try {
+    const res = await fetch('vacancies.csv');
+    if (res.ok) jobs = parseCSV(await res.text());
+  } catch(e) {}
+  box.classList.remove('footer-vacancies--loading');
+  if (jobs.length > 0) {
+    const count = jobs.length;
+    box.innerHTML = `
+      <p class="footer-vac-label">${count} position${count !== 1 ? 's' : ''} open</p>
+      <p class="footer-vac-heading">Join the team.</p>
+      <p class="footer-vac-body">We're looking for experienced engineers and motivated apprentices who take pride in their work.</p>
+      <span class="footer-vac-cta">View current vacancies</span>`;
+    box.style.cursor = 'pointer';
+    box.addEventListener('click', () => { window.location.href = 'index4-vacancies.html'; });
+  } else {
+    box.classList.add('footer-vacancies--none');
+    box.innerHTML = `
+      <p class="footer-vac-label footer-vac-label--dim">Vacancies</p>
+      <p class="footer-vac-heading" style="color:rgba(255,255,255,0.45);font-size:18px">Not currently hiring.</p>
+      <p class="footer-vac-body">We're not actively recruiting right now, but we're always happy to hear from exceptional candidates.</p>
+      <a href="mailto:info@lminstallations.co.uk" class="footer-vac-cta" style="color:rgba(255,255,255,0.35)">Send a speculative CV</a>`;
+  }
+}
+
+loadJobs();
+loadFooterVac();
+</script>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LM Installations - Font Evaluator</title>
+	
+	<!--GF-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+		<link href="https://fonts.googleapis.com/css2?
+		family=Actor
+		&family=Anta
+		&family=Audiowide
+		&family=Belleza
+		&family=Cuprum:wght@400;500;600;700
+		&family=Electrolize
+		&family=Finlandica:ital,wght@0,100..900;1,100..900
+		&family=Gugi
+		&family=Mina:wght@400;700
+		&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800
+		&family=Inter:wght@100..900
+		&family=IBM+Plex+Sans:wght@100..700
+		&family=Merriweather:wght@300..900
+		&family=Noto+Serif:ital,wght@0,100..900;1,100..900
+		&family=Science+Gothic:wght@100..900
+		&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900
+		&family=Suranna
+		&display=swap" rel="stylesheet">
+
+
+
+	<!-- style after font load -->
+	  <link rel="stylesheet" href="assets-font/style1.css" />
+
+</head>
+<body>
+<div id="site-content">
+  <!-- NAV -->
+  <header class="nav">
+  <div class="nav-inner">
+      <div class="logo">LM Installations</div>
+      <nav>
+		<a href="index.html">Site 1</a>
+        <a href="index2.html">Site 2</a>
+        <a href="index3.html">Site 3</a>
+        <a href="index4.html">Site 4</a>
+        <a href="index5.html">Site 5</a>
+		<a href="index6.html">Site 6</a>
+		<a href="index7.html">Site 7</a>
+		<a href="font.html">THIS SITE</a>
+		<a href="gallery.html">Galleries</a>
+      </nav>
+    </div>
+  </header>
+	
+<!------------- HERO AND FONT SELECTOR -------------------->
+<section class="hero-pro font-hero">
+  <div class="hero-inner">
+
+    <h1>Font Evaluator Page</h1>
+    <p>Choose a font from the buttons below<br>The entire page will update instantly, so you can preview how the new LM Installations font will look in each style.</p>
+
+    <!-- FONT SELECTOR MOVED HERE -->
+	<div class="font-switcher hero-font-switcher">
+
+	  <button data-font="none" class="active default-font">System UI (Default)</button>
+
+	  <button data-font="font-actor">Actor</button>
+	  <button data-font="font-anta">Anta</button>
+	  <button data-font="font-audiowide">Audiowide</button>
+	  <button data-font="font-belleza">Belleza</button>
+	  <button data-font="font-cuprum">Cuprum</button>
+	  <button data-font="font-electrolize">Electrolize</button>
+	  <button data-font="font-finlandica">Finlandica</button>
+	  <button data-font="font-gugi">Gugi</button>
+	  <button data-font="font-mina">Mina</button>
+	  <button data-font="font-newsreader">Newsreader</button>
+	  <button data-font="font-inter">Inter</button>
+	  <button data-font="font-ibm-plex">IBM Plex Sans</button>
+	  <button data-font="font-merriweather">Merriweather</button>
+	  <button data-font="font-noto-serif">Noto Serif</button>
+	  <button data-font="font-science-gothic">Science Gothic</button>
+	  <button data-font="font-source-serif">Source Serif 4</button>
+	  <button data-font="font-suranna">Suranna</button>
+		
+	 <p id="current-font" class="current-font-label">Selected Font: System UI (Default)</p>
+
+	</div>
+
+
+
+    <p class="font-note">
+      Note: The comparison grid towards the end of the page stays unchanged, so you can compare fonts side‑by‑side.
+    </p>
+
+  </div>
+</section>
+
+<!-- FONT CHANGE AREA -->
+	<div class="font-change-area">
+		
+	<!-- DEMO TEXT FOR FOTN CHANGER -->
+<div class="font-preview">
+  <h1>Heading One Example — LM Installations</h1>
+  <h2>Heading Two — Electrical & FM Specialists</h2>
+  <h3>Heading Three — Quality, Safety, Reliability</h3>
+  <h4>Heading Four — Trusted by Businesses Across the UK</h4>
+
+  <p>
+    LM Installations has completed more than <strong>1,250+</strong> electrical
+    and facilities‑management projects across commercial, industrial, and
+    public‑sector environments. Our engineers operate 24/7, delivering rapid
+    response times, certified workmanship, and full compliance with UK
+    regulations.
+  </p>
+
+  <p>
+    Sample characters: A–Z, a–z, 0–9, £ € % & ( ) — “quotes”, ‘apostrophes’,
+    commas, full stops, and symbols. This helps you see how each typeface
+    handles real‑world content.
+  </p>
+
+  <p>
+    Example sentence: *“Professional, reliable, and trusted by businesses
+    nationwide — LM Installations delivers quality you can depend on.”*
+  </p>
+</div>
+
+
+  <!-- SERVICES -->
+<section id="services" class="section what-we-do-slider">
+  <h2>Our Services demo</h2>
+
+  <div class="slider-container">
+    <div class="slider-track">
+
+      <!-- 1 — Electrical Contracting -->
+      <div class="service-card gradient-a">
+        <div class="service-img"></div>
+        <h3>Electrical Contracting</h3>
+        <p>Schools, commercial offices, public sector buildings, and listed properties.</p>
+      </div>
+
+      <!-- 2 — Installation & Repair (VIDEO) -->
+      <div class="service-card gradient-b">
+        <video class="service-video" autoplay muted loop playsinline>
+          <source src="assets-all/images/vid1.mp4" type="video/mp4">
+          <source src="assets-all/images/vid1.mov" type="video/quicktime">
+        </video>
+        <h3>Electrical Installation & Repair</h3>
+        <p>Full installation, upgrades, and responsive repair work for all building types.</p>
+      </div>
+
+      <!-- 3 — Testing & Inspection -->
+      <div class="service-card gradient-c">
+        <div class="service-img"></div>
+        <h3>Electrical Testing & Inspection</h3>
+        <p>EICRs, landlord reports, and full electrical compliance testing.</p>
+      </div>
+
+      <!-- 4 — Cabling & Networks (VIDEO) -->
+      <div class="service-card gradient-d">
+        <video class="service-video" autoplay muted loop playsinline>
+          <source src="assets-all/images/vid2.mp4" type="video/mp4">
+          <source src="assets-all/images/vid2.mov" type="video/quicktime">
+        </video>
+        <h3>Cabling & Network Infrastructure</h3>
+        <p>Structured cabling, data networks, and communications systems.</p>
+      </div>
+
+      <!-- 5 — Fire Alarms -->
+      <div class="service-card gradient-e">
+        <div class="service-img"></div>
+        <h3>Fire Alarm Installation & Maintenance</h3>
+        <p>Design, installation, testing, and ongoing servicing of fire alarm systems.</p>
+      </div>
+
+      <!-- 6 — Security Systems -->
+      <div class="service-card gradient-f">
+        <div class="service-img"></div>
+        <h3>Security System Installation</h3>
+        <p>Intruder alarms, access control, and integrated security solutions.</p>
+      </div>
+
+      <!-- 7 — CCTV (VIDEO) -->
+      <div class="service-card gradient-g">
+        <video class="service-video" autoplay muted loop playsinline>
+          <source src="assets-all/images/vid3.mp4" type="video/mp4">
+          <source src="assets-all/images/vid3.mov" type="video/quicktime">
+        </video>
+        <h3>CCTV Installation & Maintenance</h3>
+        <p>High‑definition CCTV systems for homes, businesses, and public buildings.</p>
+      </div>
+
+      <!-- 8 — Automatic Gates -->
+      <div class="service-card gradient-h">
+        <div class="service-img"></div>
+        <h3>Automatic Gates & Door Entry</h3>
+        <p>Automated gates, intercoms, and controlled entry systems.</p>
+      </div>
+
+      <!-- 9 — Emergency Callouts -->
+      <div class="service-card gradient-i">
+        <div class="service-img"></div>
+        <h3>Emergency Call‑Outs</h3>
+        <p>Fast response for urgent electrical issues and safety concerns.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="slider-dots"></div>
+</section>
+
+<!--- GALLERY 1 --->
+
+<section class="work-gallery">
+<h2>Gallery demo</h2>
+  <div class="gallery-item">
+    <img src="assets-all/images/img4.jpg" alt="">
+    <div class="gallery-caption">Lighting Upgrade — Commercial Office</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="assets-all/images/img3.jpg" alt="">
+    <div class="gallery-caption">Fire Alarm Installation — School</div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="assets-all/images/img1.jpg" alt="">
+    <div class="gallery-caption">CCTV System — Retail Unit</div>
+  </div>
+</section>
+
+		
+<!-- FONT CHANGE AREA ENDS-->
+	</div>
+
+
+	
+<!-- TYPOGRAPHY comparison   ----->
+	
+	<!-- mark section as unaffected by page font changer --->>
+	
+	<h2 class="type-demo-heading no-font-change">Side-by-side Font Comparison</h2>
+
+	<section class="type-demo no-font-change">
+
+		<!-- Actor -->
+		<div class="type-block">
+		  <h3 class="font-actor">LM Installations</h3>
+		  <p class="font-actor subline">Specialists in Electricals & FM</p>
+		  <p class="font-actor bodyline">WELCOME TO THE SITE</p>
+		  <p class="font-actor bodyline">Welcome to the site</p>
+		  <span class="type-label">Actor</span>
+		</div>
+
+		<!-- Anta -->
+		<div class="type-block">
+		  <h3 class="font-anta">LM Installations</h3>
+		  <p class="font-anta subline">Specialists in Electricals & FM</p>
+		  <p class="font-anta bodyline">WELCOME TO THE SITE</p>
+		  <p class="font-anta bodyline">Welcome to the site</p>
+		  <span class="type-label">Anta</span>
+		</div>
+
+		<!-- Audiowide -->
+		<div class="type-block">
+		  <h3 class="font-audiowide">LM Installations</h3>
+		  <p class="font-audiowide subline">Specialists in Electricals & FM</p>
+		  <p class="font-audiowide bodyline">WELCOME TO THE SITE</p>
+		  <p class="font-audiowide bodyline">Welcome to the site</p>
+		  <span class="type-label">Audiowide</span>
+		</div>
+
+		<!-- Belleza -->
+		<div class="type-block">
+		  <h3 class="font-belleza">LM Installations</h3>
+		  <p class="font-belleza subline">Specialists in Electricals & FM</p>
+		  <p class="font-belleza bodyline">WELCOME TO THE SITE</p>
+		  <p class="font-belleza bodyline">Welcome to the site</p>
+		  <span class="type-label">Belleza</span>
+		</div>
+
+		<!-- Cuprum -->
+		<div class="type-block">
+		  <h3 class="font-cuprum">LM Installations</h3>
+		  <p class="font-cuprum subline">Specialists in Electricals & FM</p>
+		  <p class="font-cuprum bodyline">WELCOME TO THE SITE</p>
+		  <p class="font-cuprum bodyline">Welcome to the site</p>
+		  <span class="type-label">Cuprum</span>
+		</div>
+
+		<!-- Electrolize -->
+		<div class="type-block">
+		  <h3 class="font-electrolize">LM Installations</h3>
+		  <p class="font-electrolize subline">Specialists in Electricals & FM</p>
+		  <p class="font-electrolize bodyline">WELCOME TO THE SITE</p>
+		  <p class="font-electrolize bodyline">Welcome to the site</p>
+		  <span class="type-label">Electrolize</span>
+		</div>
+
+		<!-- Finlandica Text -->
+		<div class="type-block">
+		  <h3 class="font-finlandica">LM Installations</h3>
+		  <p class="font-finlandica subline">Specialists in Electricals & FM</p>
+		  <p class="font-finlandica bodyline">WELCOME TO THE SITE</p>
+		  <p class="font-finlandica bodyline">Welcome to the site</p>
+		  <span class="type-label">Finlandica Text</span>
+		</div>
+
+		<!-- Geo -->
+		<div class="type-block">
+		  <h3 class="font-geo">LM Installations</h3>
+		  <p class="font-geo subline">Specialists in Electricals & FM</p>
+		  <p class="font-geo bodyline">WELCOME TO THE SITE</p>
+		  <p class="font-geo bodyline">Welcome to the site</p>
+		  <span class="type-label">Geo</span>
+		</div>
+
+		<!-- Gugi -->
+		<div class="type-block">
+		  <h3 class="font-gugi">LM Installations</h3>
+		  <p class="font-gugi subline">Specialists in Electricals & FM</p>
+		  <p class="font-gugi bodyline">WELCOME TO THE SITE</p>
+		  <p class="font-gugi bodyline">Welcome to the site</p>
+		  <span class="type-label">Gugi</span>
+		</div>
+
+		<!-- Mina -->
+		<div class="type-block">
+		  <h3 class="font-mina-bold">LM Installations</h3>
+		  <p class="font-mina subline">Specialists in Electricals & FM</p>
+		  <p class="font-mina bodyline">WELCOME TO THE SITE</p>
+		  <p class="font-mina bodyline">Welcome to the site</p>
+		  <span class="type-label">Mina</span>
+		</div>
+
+		<!-- Newsreader -->
+		<div class="type-block">
+		  <h3 class="font-newsreader">LM Installations</h3>
+		  <p class="font-newsreader subline">Specialists in Electricals & FM</p>
+		  <p class="font-newsreader bodyline">WELCOME TO THE SITE</p>
+		  <p class="font-newsreader bodyline">Welcome to the site</p>
+		  <span class="type-label">Newsreader</span>
+		</div>
+
+		<!-- Noto Sans JP -->
+		<div class="type-block">
+		  <h3 class="font-noto-jp">LM Installations</h3>
+		  <p class="font-noto-jp subline">Specialists in Electricals & FM</p>
+		  <p class="font-noto-jp bodyline">WELCOME TO THE SITE</p>
+		  <p class="font-noto-jp bodyline">Welcome to the site</p>
+		  <span class="type-label">Noto Sans JP</span>
+		</div>
+
+		<!-- Noto Serif -->
+		<div class="type-block">
+		  <h3 class="font-noto-serif">LM Installations</h3>
+		  <p class="font-noto-serif subline">Specialists in Electricals & FM</p>
+		  <p class="font-noto-serif bodyline">WELCOME TO THE SITE</p>
+		  <p class="font-noto-serif bodyline">Welcome to the site</p>
+		  <span class="type-label">Noto Serif</span>
+		</div>
+
+		<!-- Science Gothic -->
+		<div class="type-block">
+		  <h3 class="font-science-gothic">LM Installations</h3>
+		  <p class="font-science-gothic subline">Specialists in Electricals & FM</p>
+		  <p class="font-science-gothic bodyline">WELCOME TO THE SITE</p>
+		  <p class="font-science-gothic bodyline">Welcome to the site</p>
+		  <span class="type-label">Science Gothic</span>
+		</div>
+
+		<!-- Source Serif 4 -->
+		<div class="type-block">
+		  <h3 class="font-source-serif">LM Installations</h3>
+		  <p class="font-source-serif subline">Specialists in Electricals & FM</p>
+		  <p class="font-source-serif bodyline">WELCOME TO THE SITE</p>
+		  <p class="font-source-serif bodyline">Welcome to the site</p>
+		  <span class="type-label">Source Serif 4</span>
+		</div>
+
+		<!-- Suranna -->
+		<div class="type-block">
+		  <h3 class="font-suranna">LM Installations</h3>
+		  <p class="font-suranna subline">Specialists in Electricals & FM</p>
+		  <p class="font-suranna bodyline">WELCOME TO THE SITE</p>
+		  <p class="font-suranna bodyline">Welcome to the site</p>
+		  <span class="type-label">Suranna</span>
+		</div>
+<!-- section unaffected by font changer ends here-->
+</section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <h2>Get in Touch</h2>
+    <p>Email: info@lminstallations.co.uk</p>
+    <p>Phone: 01234 567890</p>
+  </section>
+
+  <script src="assets-font/main1.js"></script>
+</body>
+</html>
